@@ -1,0 +1,416 @@
+<form id="form-step" data-fls-form="dev" action="#" method="POST">
+	<!-- step-1 -->
+	<div class="form-step__body">
+		<div class="form-step__left left-step">
+			<h4 class="left-step__title">Габариты</h4>
+			<div data-fls-grid class="left-step__fields left-step__fields--mb">
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">В разложенном виде</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[gabaritone]"
+						placeholder="Длина, ширина, высота" class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">В разложенном виде</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[gabarittwo]"
+						placeholder="Длина, ширина, высота" class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">В разложенном виде</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[gabaritthree]"
+						placeholder="Длина, ширина, высота" class="left-step__input">
+				</label>
+				<p data-fls-grid-col="8" data-fls-grid-col-mobile="12" class="left-step__instruction">Введите
+					длину, ширину и высоту через
+					запятую и пробел</p>
+			</div>
+			<div class="left-step__buttons">
+				<button data-fls-button type="button" class="left-step__next --icon-arrow-right">Далее</button>
+			</div>
+		</div>
+		<div data-fls-grid class="form-step__navigation navigation-step">
+			<div data-fls-grid-col="1" class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active">1</span><span
+					class="navigation-step__text">Габариты</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div data-fls-grid-col="1" class="navigation-step__item"><span class="navigation-step__number">2</span><span
+					class="navigation-step__text">Характеристики</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div data-fls-grid-col="1" class="navigation-step__item"><span class="navigation-step__number">3</span><span
+					class="navigation-step__text">Каналы</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div data-fls-grid-col="1" class="navigation-step__item"><span class="navigation-step__number">4</span><span
+					class="navigation-step__text">Видеосистемы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div data-fls-grid-col="1" class="navigation-step__item"><span class="navigation-step__number">5</span><span
+					class="navigation-step__text">Ваши
+					контакты</span></div>
+		</div>
+	</div>
+	<!-- step 2 -->
+	<div class="form-step__body">
+		<div class="form-step__left left-step">
+			<h4 class="left-step__title">Характеристики</h4>
+			<div data-fls-grid class="left-step__fields fields-step-top">
+				<div data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item"><span class="left-step__text">Тип БПЛА</span>
+					<select class="left-step__select select-step" name="form-step[typebpla]" data-fls-select
+						data-fls-select-search data-fls-select-modif="form-step">
+						<option value="1" selected>Мультимоторный</option>
+						<option value="2">Самолетный</option>
+						<option value="3">VTOL</option>
+					</select>
+				</div>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Количество винтомоторных групп</span>
+					<input autocomplete="off" type="text" name="form-step[quantity-vint]" placeholder="Длина, ширина, высота"
+						class="left-step__input">
+				</label>
+				<div data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item"><span class="left-step__text">Тип
+						сервоприводов</span>
+					<select class="left-step__select select-step" name="form-step[typeserv]" data-fls-select
+						data-fls-select-search data-fls-select-modif="form-step">
+						<option value="1" selected>Тип такой</option>
+						<option value="2">Тип сякой</option>
+						<option value="3">Тип дургой</option>
+						<option value="4">Тип этакий</option>
+						<option id="variant" value="Свой вариант">Свой вариант</option>
+					</select>
+				</div>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Количество сервоприводов</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[quantity-serv]"
+						placeholder="Длина, ширина, высота" class="left-step__input">
+				</label>
+				<p data-fls-grid-col="8" data-fls-grid-col-tablet="12" class="left-step__instruction">Выберите
+					вариант из списка или введите
+					собственный</p>
+			</div>
+			<div data-fls-grid class="left-step__fields fields-step-bottom left-step__fields--mb">
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Грузоподъёмность (кг)</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[capacity]"
+						placeholder="Введите число" class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Время полета (мин)</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[time-fly]"
+						placeholder="Введите число" class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Макс высота полета (м)</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[h-fly]" placeholder="Введите число"
+						class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Температура эксплуатации (°C)</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[temperature]"
+						placeholder="Введите число" class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Скорость ветра (м/c)</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[speed-wind]"
+						placeholder="Введите число" class="left-step__input">
+				</label>
+			</div>
+			<div class="left-step__buttons">
+				<button data-fls-button type="button" class="left-step__prev">Назад</button>
+				<button data-fls-button type="button" class="left-step__next --icon-arrow-right">Далее</button>
+			</div>
+		</div>
+		<div class="form-step__navigation navigation-step">
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Габариты</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active">2</span><span
+					class="navigation-step__text">Характеристики</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span class="navigation-step__number">3</span><span
+					class="navigation-step__text">Каналы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span class="navigation-step__number">4</span><span
+					class="navigation-step__text">Видеосистемы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span class="navigation-step__number">5</span><span
+					class="navigation-step__text">Ваши
+					контакты</span></div>
+		</div>
+	</div>
+	<!-- step 3 -->
+	<div class="form-step__body">
+		<div class="form-step__left left-step">
+			<h4 class="left-step__title">Каналы</h4>
+			<div data-fls-grid class="left-step__fields fields-step-top">
+				<h6 data-fls-grid-col="12" class="left-step__subtitle">Канал управления</h6>
+				<div data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item"><span class="left-step__text">Частота, (МГц)</span>
+					<select class="left-step__select select-step" name="form-step[frequency-control]" data-fls-select
+						data-fls-select-search data-fls-select-modif="form-step">
+						<option value="1" selected>433</option>
+						<option value="2">Еще частота</option>
+						<option value="3">Еще частота</option>
+					</select>
+				</div>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Мощность, (вт)</span>
+					<input autocomplete="off" type="text" name="form-step[power]" placeholder="Введите число"
+						class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Скорость канальная (мбит/с)</span>
+					<input autocomplete="off" type="text" name="form-step[speed-channel]" placeholder="Введите число"
+						class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Скорость интерфейса (мбит/с)</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[speed-interface]"
+						placeholder="Введите число" class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Дальность канала (км)</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[channel-range-control]"
+						placeholder="Введите число" class="left-step__input">
+				</label>
+			</div>
+			<div data-fls-grid class="left-step__fields fields-step-bottom left-step__fields--mb">
+				<h6 data-fls-grid-col="12" class="left-step__subtitle">Видео канал</h6>
+				<div data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item"><span class="left-step__text">Частота, (МГц)</span>
+					<select class="left-step__select select-step" name="form-step[frequency-video]" data-fls-select
+						data-fls-select-search data-fls-select-modif="form-step">
+						<option value="1" selected>433</option>
+						<option value="2">Еще частота</option>
+						<option value="3">Еще частота</option>
+					</select>
+				</div>
+				<div data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item"><span class="left-step__text">Тип канала</span>
+					<select class="left-step__select select-step" name="form-step[typechanel]" data-fls-select
+						data-fls-select-search data-fls-select-modif="form-step">
+						<option value="1" selected>Цифровой</option>
+						<option value="2">Другой</option>
+						<option value="3">Еще один</option>
+					</select>
+				</div>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Дальность канала (км)</span>
+					<input data-fls-input autocomplete="off" type="text" name="form-step[channel-range-video]"
+						placeholder="Введите число" class="left-step__input">
+				</label>
+				<p data-fls-grid-col="8" data-fls-grid-col-tablet="12" class="left-step__instruction">Выберите
+					вариант из списка или введите
+					собственный</p>
+			</div>
+			<div class="left-step__buttons">
+				<button data-fls-button type="button" class="left-step__prev">Назад</button>
+				<button data-fls-button type="button" class="left-step__next --icon-arrow-right">Далее</button>
+			</div>
+		</div>
+		<div class="form-step__navigation navigation-step">
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Габариты</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Характеристики</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active">3</span><span
+					class="navigation-step__text">Каналы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span class="navigation-step__number">4</span><span
+					class="navigation-step__text">Видеосистемы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span class="navigation-step__number">5</span><span
+					class="navigation-step__text">Ваши
+					контакты</span></div>
+		</div>
+	</div>
+	<!-- step 4 -->
+	<div class="form-step__body">
+		<div class="form-step__left left-step">
+			<h4 class="left-step__title">Видеосистемы</h4>
+			<div data-fls-grid class="left-step__fields">
+				<div data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item"><span class="left-step__text">Тип камеры</span>
+					<select class="left-step__select select-step" name="form-step[type-camera]" data-fls-select
+						data-fls-select-search data-fls-select-modif="form-step">
+						<option value="1" selected>Дневная</option>
+						<option value="2">Ночная</option>
+						<option value="3">Еще тип</option>
+					</select>
+				</div>
+				<div data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item"><span class="left-step__text">Тип подвеса</span>
+					<select class="left-step__select select-step" name="form-step[type-suspension]" data-fls-select
+						data-fls-select-search data-fls-select-modif="form-step">
+						<option value="1" selected>Трех осевой</option>
+						<option value="2">Еще тип</option>
+						<option value="3">Еще тип</option>
+					</select>
+				</div>
+			</div>
+			<div class="left-step__buttons">
+				<button data-fls-button type="button" class="left-step__prev">Назад</button>
+				<button data-fls-button type="button" class="left-step__next --icon-arrow-right">Далее</button>
+			</div>
+		</div>
+		<div class="form-step__navigation navigation-step">
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Габариты</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Характеристики</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Каналы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active">4</span><span
+					class="navigation-step__text">Видеосистемы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span class="navigation-step__number">5</span><span
+					class="navigation-step__text">Ваши
+					контакты</span></div>
+		</div>
+	</div>
+	<!-- step 5 -->
+	<div class="form-step__body">
+		<div class="form-step__left left-step">
+			<h4 class="left-step__title">Ваши контакты</h4>
+			<div data-fls-grid data-fls-grid-samerows class="left-step__fields">
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Название компании</span>
+					<input autocomplete="off" type="text" name="form-step[company-name]" placeholder="Введите название"
+						class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">ФИО представителя</span>
+					<input required autocomplete="off" type="text" name="form-step[representative-name]"
+						placeholder="Введите ФИО" class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Электронная почта</span>
+					<input required autocomplete="off" type="email" name="form-step[email]" placeholder="Введите E-mail"
+						class="left-step__input">
+				</label>
+				<label data-fls-grid-col="3" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="left-step__item">
+					<span class="left-step__text">Телефон</span>
+					<input data-fls-input-mask="+7(999) 999-9999" required autocomplete="off" type="tel"
+						name="form-step[representative-name]" placeholder="Введите телефон" class="left-step__input">
+				</label>
+				<label data-fls-grid-col="12" data-fls-grid-row="3" class="left-step__item">
+					<span class="left-step__text">Дополнительные требования</span>
+					<textarea data-fls-input autocomplete="off" name="form[]"
+						placeholder="Технические или иные требования, комментарии, уточнения" data-error="Ошибка"
+						class="left-step__input"></textarea>
+				</label>
+
+			</div>
+			<div class="left-step__buttons left-step__buttons--end">
+				<button data-fls-button type="button" class="left-step__prev">Назад</button>
+				<button data-fls-button type="submit" class="left-step__submit">Отправить
+					заявку</button>
+				<label data-fls-checkbox class="left-step__checkbox checkbox">
+					<input required data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+						name="form[privacy-check]">
+					<span class="checkbox__text --icon-check">Нажимая кнопку, я даю согласие на обработку
+						персональных
+						данных, а
+						также
+						подтверждаю, что ознакомлен с Политикой конфиденциальности</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-step__navigation navigation-step">
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Габариты</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Характеристики</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Каналы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Видеосистемы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active">5</span><span
+					class="navigation-step__text">Ваши
+					контакты</span></div>
+		</div>
+	</div>
+	<!-- final step -->
+	<div class="form-step__body">
+		<div class="form-step__left left-step left-step--final">
+			<h4 class="left-step__title">Ваша заявка была успешна отправлена. Ожидайте ответа в течение
+				рабочего дня</h4>
+			<button data-fls-button type="reset" class="left-step__button left-step__submit">Назад к
+				заявке</button>
+		</div>
+		<div class="form-step__navigation navigation-step">
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Габариты</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Характеристики</span>
+			</div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Каналы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Видеосистемы</span></div>
+			<span class="navigation-step__dashed"></span>
+			<div class="navigation-step__item"><span
+					class="navigation-step__number navigation-step__number--active --icon-check"></span><span
+					class="navigation-step__text">Ваши
+					контакты</span></div>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,63 @@
+.pages {
+}
+.feedback-page {
+	&__container {
+	}
+	&__title {
+		@include adaptiveValue("margin-bottom", 20, 16);
+	}
+	&__text {
+		@include adaptiveValue("font-size", 16, 12);
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+	&__form {
+	}
+	&__content {
+	}
+
+	&__input {
+		padding: 12px 16px;
+		border: 1px solid $mainColor;
+		border-radius: 8px;
+		outline: none;
+		&::placeholder {
+			color: $mainColor;
+		}
+		&.--form-error {
+			color: $buttonColor;
+			&::placeholder {
+				color: $buttonColor;
+			}
+		}
+	}
+
+	&__button {
+		width: auto;
+		justify-content: center;
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 40, 16);
+		@media (max-width: toEm($mobile)) {
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		@media (max-width: toEm($pc)) {
+			flex: 0 1 60%;
+		}
+		img {
+			@extend %ibg;
+		}
+		&--cover {
+			border-radius: 12px;
+			overflow: hidden;
+			@media (max-width: toEm($pc)) {
+				flex: 0 1 40%;
+			}
+		}
+	}
+}

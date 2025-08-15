@@ -1,0 +1,41 @@
+<script type="module" src="@components/pages/catalog-category/catalog-category.js"></script>
+<link rel="stylesheet" href="@components/pages/catalog-category/catalog-category.scss">
+
+
+<main class="pages page--catalog catalog">
+	<div data-fls-breadcrumbs class="pages__breadcrumbs breadcrumbs">
+		<div class="breadcrumbs__container">
+			<div class="breadcrumbs__body">
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Главная</a>
+				<span class="breadcrumbs__dotted"></span>
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Дроны</a>
+				<span class="breadcrumbs__dotted"></span>
+				<span class="breadcrumbs__button breadcrumbs__button--active">Дроны для обучения</span>
+			</div>
+			<h2 class="breadcrumbs__title title">Дроны для обучения</h2>
+		</div>
+	</div>
+	<section data-fls-brends class="pages__brends brends">
+		<div class="brends__container">
+			<h2 class="brends__title title-40">Популярные бренды</h2>
+			<!-- Оболочка слайдера -->
+			<div data-fls-slider class="brends__slider swiper">
+				<!-- Часть слайдера, которая движется -->
+				<div class="brends__wrapper swiper-wrapper">
+					<!-- Слайд -->
+					<a href="" class="brends__slide swiper-slide"><img src="@img/logos/02.svg" alt="Изображение"></a>
+					<a href="" class="brends__slide swiper-slide"><img src="@img/logos/01.svg" alt="Изображение"></a>
+					<a href="" class="brends__slide swiper-slide"><img src="@img/logos/03.svg" alt="Изображение"></a>
+					<a href="" class="brends__slide swiper-slide"><img src="@img/logos/04.svg" alt="Изображение"></a>
+					<a href="" class="brends__slide swiper-slide"><img src="@img/logos/05.svg" alt="Изображение"></a>
+					<a href="" class="brends__slide swiper-slide"><img src="@img/logos/06.svg" alt="Изображение"></a>
+					<a href="" class="brends__slide swiper-slide"><img src="@img/logos/07.svg" alt="Изображение"></a>
+					<a href="" class="brends__slide swiper-slide"><img src="@img/logos/08.svg" alt="Изображение"></a>
+				</div>
+				<button type="button" class="swiper-button-preview --icon-spoller-right"></button>
+				<button type="button" class="swiper-button-nextus --icon-spoller-right"></button>
+			</div>
+		</div>
+	</section>
+	<include src="@components/custom/filter/filter.html"></include>
+</main>

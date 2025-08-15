@@ -1,0 +1,145 @@
+<script type="module" src="@components/pages/profile/profile.js"></script>
+<link rel="stylesheet" href="@components/pages/profile/profile.scss">
+
+
+<main class="pages page--profile profile">
+	<div data-fls-breadcrumbs class="pages__breadcrumbs breadcrumbs">
+		<div class="breadcrumbs__container">
+			<div class="breadcrumbs__body">
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Главная</a>
+				<span class="breadcrumbs__dotted"></span>
+				<span class="breadcrumbs__button breadcrumbs__button--active">Личный кабинет</span>
+				<span class="breadcrumbs__dotted"></span>
+				<span class="breadcrumbs__button breadcrumbs__button--active dynamic-title"></span>
+			</div>
+			<h2 class="breadcrumbs__title title dynamic-title"></h2>
+		</div>
+	</div>
+	<div class="profile__content content-profile">
+		<div class="content-profile__container">
+			<div class="content-profile__body">
+				<div data-fls-tabs class="content-profile__tabs tabs-profile">
+					<nav data-fls-tabs-titles class="tabs-profile__navigation">
+						<button type="button" class="tabs-profile__title --tab-active">Контактные данные</button>
+						<button type="button" class="tabs-profile__title">Заказы</button>
+						<button type="button" class="tabs-profile__title">Платежные данные</button>
+						<button type="reset" class="tabs-profile__title tabs-profile__quit">Выйти</button>
+					</nav>
+					<div data-fls-tabs-body class="tabs-profile__content">
+						<div class="tabs-profile__body tab-contact">
+							<div class="tab-contact__col col-tabs">
+								<h3 class="tab-contact__title title-40">Личные данные</h3>
+								<form id="form-profile" data-fls-form="dev" action="#" method="POST">
+									<div class="tab-contact__body">
+										<div class="tab-contact__left tab-contact">
+											<div data-fls-grid class="tab-contact__fields">
+												<label data-fls-grid-col="6" data-fls-grid-col-small="12" class="tab-contact__item">
+													<span class="tab-contact__text">Фамилия Имя Отчество</span>
+													<input data-fls-input autocomplete="off" type="text" name="form-profile[user]"
+														placeholder="" class="tab-contact__input">
+												</label>
+												<label data-fls-grid-col="6" data-fls-grid-col-small="12" class="tab-contact__item">
+													<span class="tab-contact__text">Электронная почта</span>
+													<input data-fls-input autocomplete="off" type="text" name="form-profile[email]"
+														placeholder="" class="tab-contact__input">
+												</label>
+												<label data-fls-grid-col="6" data-fls-grid-col-small="12" class="tab-contact__item">
+													<span class="tab-contact__text">Телефон</span>
+													<input data-fls-input autocomplete="off" type="text" name="form-profile[phone]"
+														placeholder="" class="tab-contact__input">
+												</label>
+												<button data-fls-grid-col="6" data-fls-grid-col-small="12" data-fls-button
+													type="button" class="tab-contact__button button">Изменить</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="tab-contact__col col-tabs">
+								<h3 class="tab-contact__title title-40">Изменить пароль</h3>
+								<form id="form-profile" data-fls-form="dev" action="#" method="POST">
+									<div class="tab-contact__body">
+										<div class="tab-contact__left tab-contact">
+											<div data-fls-grid class="tab-contact__fields">
+												<div data-fls-grid-col="6" data-fls-grid-col-small="12" class="tab-contact__item">
+													<input data-fls-input autocomplete="off" type="password"
+														name="form-profile[password]" placeholder="Новый пароль"
+														class="tab-contact__input">
+												</div>
+												<div data-fls-grid-col="6" data-fls-grid-col-small="12" class="tab-contact__item">
+													<input data-fls-input autocomplete="off" type="password"
+														name="form-profile[password]" placeholder="Подтвердите пароль"
+														class="tab-contact__input">
+												</div>
+												<button data-fls-grid-col="12" type="button" data-fls-input-viewpass
+													class="tab-contact__button tab-contact__button--viewpass button">Показать
+													пароль</button>
+												<button data-fls-grid-col="12" type="button"
+													class="tab-contact__button button">Изменить пароль</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="tabs-profile__body tab-orders">
+							<div class="tab-orders__col col-tabs">
+								<div class="tab-orders__row">
+									<div class="tab-orders__left">
+										<h4 class="tab-orders__title">Заказ от 02.06.2025</h4>
+										<p class="tab-orders__num">№ 243245</p>
+									</div>
+									<div class="tab-orders__sum">800 000 000 ₽</div>
+								</div>
+								<div class="tab-orders__delivery">
+									<div class="tab-orders__address">Доставлется по адресу: г. Ижевск, ул. Ленина, д. 24</div>
+									<div class="tab-orders__date">Дата доставки: <span>12.06.2025</span></div>
+								</div>
+								<div id="order-status" class="tab-orders__status">
+									В сборке
+								</div>
+								<div data-fls-grid class="tab-orders__product product-order">
+									<div data-fls-grid-col="3" data-fls-grid-col-tablet="6" class="product-order__item"><img
+											src="@img/product/01.png" alt="Изображение">
+										<div class="product-order__text">
+											<div class="product-order__title">DJI Mavic 3T</div>
+											<div class="product-order__quantity">x100</div>
+										</div>
+									</div>
+									<div data-fls-grid-col="3" data-fls-grid-col-tablet="6" class="product-order__item"><img
+											src="@img/product/01.png" alt="Изображение">
+										<div class="product-order__text">
+											<div class="product-order__title">DJI Mavic 3T</div>
+											<div class="product-order__quantity">x100</div>
+										</div>
+									</div>
+									<div data-fls-grid-col="3" data-fls-grid-col-tablet="6" class="product-order__item"><img
+											src="@img/product/01.png" alt="Изображение">
+										<div class="product-order__text">
+											<div class="product-order__title">DJI Mavic 3T</div>
+											<div class="product-order__quantity">x100</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs-profile__body">
+							<div class="tab-orders__pay pay-tabs">
+								<div class="pay-tabs__item">
+									<h4 class="pay-tabs__title title-40">Способ оплаты</h4>
+									<div class="pay-tabs__row pay-tabs-method">
+										<a href="" data-fls-popup-link="addtocard" class="pay-tabs-method__item"><img
+												src="@img/pay/addcard.svg" alt="Изображение"><span>Добавить
+												карту</span></a>
+										<a href="" class="pay-tabs-method__item"><img src="@img/pay/tbank.svg"
+												alt="Изображение"><span>MIR ••
+												3152</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</main>

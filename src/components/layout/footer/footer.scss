@@ -1,0 +1,183 @@
+.footer {
+	@include adaptiveValue("padding-top", 60, 30);
+	@include adaptiveValue("padding-bottom", 40, 20);
+	background-color: $bgColor1;
+	color: $whiteColor;
+	&__container {
+	}
+
+	&__top {
+		@include adaptiveValue("padding-bottom", 40, 20);
+		border-bottom: 1px solid $productColor2;
+	}
+	&__bottom {
+		@include adaptiveValue("padding-top", 40, 20);
+	}
+}
+.top-footer {
+	&__item {
+	}
+
+	&__logo {
+		width: 100%;
+		height: 100%;
+
+		@media (max-width: toEm($tablet)) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+.item-footer {
+	&__title {
+		position: relative;
+		align-items: center;
+		font-weight: 600;
+		font-size: 16px;
+		margin-bottom: 12px;
+		transition: color 0.3s;
+		&::before {
+			right: 0;
+			top: 5px;
+			transition: transform 0.3s;
+			@include adaptiveValue("font-size", 16, 10);
+			position: absolute;
+			transform: rotate(180deg);
+			@media (min-width: toEm($mobileSmall)) {
+				display: none;
+			}
+		}
+		&.--spoller-active {
+			color: $buttonColor;
+			&::before {
+				transform: rotate(0);
+			}
+		}
+		.--spoller-init & {
+			cursor: pointer;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			font-size: 18px;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 16, 12, 1, 1920, 991.98);
+		@include adaptiveValue("font-size", 14, 12, 1, 991.98, 479.98);
+		@include adaptiveValue("font-size", 14, 14, 1, 479.98, 320);
+		&:not(:last-child) {
+			margin-bottom: 7px;
+		}
+		@media (max-width: toEm($pc)) {
+			br {
+				display: none;
+			}
+		}
+	}
+
+	&__text--uppercase {
+		text-transform: uppercase;
+	}
+
+	&__link {
+		@include adaptiveValue("font-size", 16, 12, 1, 1920, 991.98);
+		@include adaptiveValue("font-size", 14, 12, 1, 991.98, 479.98);
+		@include adaptiveValue("font-size", 14, 14, 1, 479.98, 320);
+		transition: color 0.3s;
+		&:not(:last-child) {
+			margin-bottom: 7px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $buttonColor;
+			}
+		}
+	}
+}
+
+.bottom-footer {
+	&__item {
+	}
+}
+
+.feedback-footer {
+	display: flex;
+	gap: 16px;
+	@media (max-width: toEm($pc)) {
+		flex-direction: column;
+	}
+	&__title {
+	}
+	&__text {
+		@include adaptiveValue("font-size", 16, 12, 1, 1920, 991.98);
+		@include adaptiveValue("font-size", 14, 12, 1, 991.98, 479.98);
+		@include adaptiveValue("font-size", 14, 14, 1, 479.98, 320);
+		color: rgba(227, 226, 230, 1);
+	}
+	&__form {
+	}
+	&__content {
+	}
+	&__body {
+		display: grid;
+		gap: 16px;
+		grid-template-columns: repeat(3, 1fr);
+		@media (max-width: toEm($mobile)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			grid-template-columns: auto;
+		}
+	}
+	&__input {
+		padding: 12px 16px;
+		border: 1px solid $whiteColor;
+		border-radius: 8px;
+		outline: none;
+		&::placeholder {
+			color: $whiteColor;
+		}
+		&.--form-error {
+			color: $buttonColor;
+			&::placeholder {
+				color: $buttonColor;
+			}
+		}
+	}
+
+	&__button {
+		padding: 12px 16px;
+		color: $mainColor;
+		background-color: $whiteColor;
+		border: 1px solid $whiteColor;
+		border-radius: 8px;
+	}
+
+	&__checkbox {
+	}
+}
+.checkbox {
+	&--footer {
+		grid-column-start: 2;
+		grid-column-end: 4;
+		@media (max-width: toEm($tablet)) {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			grid-column-end: auto;
+		}
+	}
+
+	&__input {
+	}
+
+	&__text {
+	}
+}

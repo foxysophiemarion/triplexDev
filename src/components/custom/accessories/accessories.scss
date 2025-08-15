@@ -1,0 +1,15 @@
+.accessories__products {
+	grid-template-columns: repeat(10, 1fr);
+	@media (max-width: toEm($tablet)) {
+		grid-template-columns: repeat(12, 1fr);
+	}
+	@media (max-width: toEm($mobileSmall)) {
+		grid-template-columns: repeat(10, 1fr);
+	}
+}
+
+.accessories {
+	&__title {
+		@include adaptiveValue("margin-bottom", 28, 16);
+	}
+}

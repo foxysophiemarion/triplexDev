@@ -1,0 +1,206 @@
+.popular-tabs {
+	// .tabs__navigation
+	&__navigation {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		@include adaptiveValue("font-size", 16, 12);
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+	// .tabs__title
+	&__title {
+		border: 1px solid $mainColor;
+		@include adaptiveValue("padding-top", 10, 4);
+		@include adaptiveValue("padding-bottom", 10, 4);
+		@include adaptiveValue("padding-right", 12, 5);
+		@include adaptiveValue("padding-left", 12, 5);
+		border-radius: 5px;
+		transition:
+			color 0.3s,
+			background-color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $mainColor;
+			}
+		}
+		&.--tab-active {
+			color: $whiteColor;
+			background-color: $mainColor;
+		}
+	}
+	// .tabs__content
+	&__content {
+	}
+	// .tabs__body
+	&__body {
+	}
+}
+
+.pay {
+	background-color: $productColor2;
+	&__content {
+	}
+
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		gap: 60px;
+		@include adaptiveValue("gap", 60, 20, 1, 1920, 991.98);
+		@include adaptiveValue("gap", 20, 20, 1, 991.98, 320);
+		@media (max-width: toEm($mobile)) {
+			flex-direction: column;
+		}
+	}
+
+	&__items {
+		flex: 1 1 auto;
+		@media (max-width: toEm($tablet)) {
+			flex: 0 1 50%;
+		}
+	}
+
+	&__summary {
+		height: max-content;
+		flex: 0 1 25%;
+		border-radius: 12px;
+		padding: 20px;
+		background-color: $whiteColor;
+		@media (max-width: toEm($tablet)) {
+			flex: 0 1 50%;
+		}
+	}
+}
+
+.pay-item {
+	border-radius: 12px;
+	background-color: $whiteColor;
+	position: relative;
+	padding: 20px;
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+	&__title {
+		@include adaptiveValue("margin-bottom", 28, 16);
+	}
+
+	&__row {
+	}
+}
+
+.form-tabs {
+	&__body {
+	}
+
+	&__input {
+		@include adaptiveValue("font-size", 16, 12);
+		border: 1px solid $bgColor1;
+		border-radius: 8px;
+		outline: none;
+		@include adaptiveValue("padding-top", 12, 8);
+		@include adaptiveValue("padding-bottom", 12, 8);
+		@include adaptiveValue("padding-right", 16, 10);
+		@include adaptiveValue("padding-left", 16, 10);
+	}
+}
+.pay-method {
+	@include adaptiveValue("font-size", 16, 12);
+	display: flex;
+	gap: 12px;
+	@media (max-width: toEm($tablet)) {
+		flex-direction: column;
+	}
+	@media (max-width: toEm($mobile)) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: toEm($mobileSmall)) {
+		grid-template-columns: auto;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 8px;
+		border-radius: 8px;
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: $bgColor2;
+		}
+	}
+}
+.delivery-method {
+	@include adaptiveValue("font-size", 16, 12);
+	.options__item {
+		margin-bottom: 0;
+	}
+	&__options {
+		display: flex;
+		gap: 12px;
+		margin-bottom: 12px;
+		@media (max-width: toEm($tablet)) {
+			flex-direction: column;
+		}
+		@media (max-width: toEm($mobile)) {
+			flex-direction: row;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			flex-direction: column;
+		}
+	}
+
+	&__cdekapi {
+	}
+
+	&__button {
+		display: inline-flex;
+	}
+}
+.options {
+	&__item {
+	}
+
+	&__input {
+	}
+
+	&__text {
+	}
+}
+.promo {
+	&__apply {
+		max-width: 180px;
+		min-height: auto;
+		@include adaptiveValue("padding-top", 12, 8);
+		@include adaptiveValue("padding-bottom", 12, 8);
+		@include adaptiveValue("padding-right", 16, 10);
+		@include adaptiveValue("padding-left", 16, 10);
+	}
+}
+.total {
+}
+.cart-total {
+}
+.total-product {
+	margin-bottom: 8px;
+	@include adaptiveValue("font-size", 16, 12);
+}
+.price-delivery {
+	margin-bottom: 20px;
+	@include adaptiveValue("font-size", 16, 12);
+}
+.delivery-total {
+}
+.checkout {
+	margin-bottom: 8px;
+	@include adaptiveValue("font-size", 16, 14);
+}
+
+.checkbox {
+	&__input {
+	}
+
+	&__text {
+	}
+}

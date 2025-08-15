@@ -1,0 +1,202 @@
+<link rel="stylesheet" href="@components/layout/popup/popup.scss">
+<div data-fls-popup="signin" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<button data-fls-popup-close type="button" class="popup__close"><svg width="16" height="16" viewBox="0 0 24 24"
+					fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#000" stroke-linecap="square" />
+					<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#000" stroke-linecap="square" />
+				</svg></button>
+			<div data-fls-popup-content class="popup__text popup-item">
+				<h3 class="popup-item__title title-40">Вход и регистрация</h3>
+				<form class="popup-item__form" data-fls-form="dev" data-fls-form-popup="popup" method="POST" action="#"
+					method="POST">
+					<div class="popup-item__body">
+						<div class="popup-item__column">
+							<input required type="email" name="form-sign[mail]" placeholder="Электронная почта"
+								class="popup-item__input">
+							<input required type="password" name="form-sign[password]" placeholder="Пароль"
+								class="popup-item__input">
+						</div>
+						<a href="" data-fls-popup-link="resetpswd" class="popup-item__pswd">Восстановить пароль</a>
+						<div class="popup-item__buttons">
+							<button type="submit" class="popup-item__button popup-item__button--orange">Войти</button>
+							<a href="" data-fls-popup-link="registration" type="button"
+								class="popup-item__button button">Зарегистрироваться</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-fls-popup="registration" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<button data-fls-popup-close type="button" class="popup__close"><svg width="16" height="16" viewBox="0 0 24 24"
+					fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#000" stroke-linecap="square" />
+					<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#000" stroke-linecap="square" />
+				</svg></button>
+			<div data-fls-popup-content class="popup__text popup-item">
+				<h3 class="popup-item__title title-40">Регистрация</h3>
+				<form class="popup-item__form" data-fls-form="dev" data-fls-form-popup="popup" method="POST" action="#"
+					method="POST">
+					<div class="popup-item__body">
+						<div class="popup-item__column">
+							<input required type="email" name="form-reg[email]" placeholder="Электронная почта"
+								class="popup-item__input">
+							<input data-fls-input-mask="+7 (999) 999-9999" required type="tel" name="form-reg[phone]"
+								placeholder="Телефон" class="popup-item__input">
+							<input required type="password" name="form-reg[password]" placeholder="Пароль"
+								class="popup-item__input">
+							<input required type="password" name="form-reg[password]" placeholder="Повторите пароль"
+								class="popup-item__input">
+						</div>
+						<div class="popup-item__buttons">
+							<a href="" data-fls-popup-link="confirmation"
+								class="popup-item__button popup-item__button--orange">Зарегистрироваться</a>
+						</div>
+						<label data-fls-checkbox class="popup-item__checkbox">
+							<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<span class="checkbox__text --icon-check">Нажимая кнопку, я даю согласие на обработку персональных
+								данных, а также подтверждаю, что ознакомлен с Политикой конфиденциальности</span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-fls-popup="confirmation" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<button data-fls-popup-close type="button" class="popup__close"><svg width="16" height="16" viewBox="0 0 24 24"
+					fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#000" stroke-linecap="square" />
+					<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#000" stroke-linecap="square" />
+				</svg></button>
+			<div data-fls-popup-content class="popup__text popup-item">
+				<h3 class="popup-item__title title-40">Подтвердите электронную почту</h3>
+				<p class="popup-item__description">Введите код подтверждения, отправленный на вашу электронную почту</p>
+				<form class="popup-item__form" data-fls-form="dev" data-fls-form-popup="popup" method="POST" action="#"
+					method="POST">
+					<div class="popup-item__body">
+						<div class="popup-item__column popup-item__column--code">
+							<input required type="number" name="form-confirmation[code]" placeholder="Код"
+								class="popup-item__input">
+							<!-- Видимость через --reset-active -->
+							<span>Запросить повторно через 45 секунд</span>
+							<button data-fls-button type="reset" class="popup-item__reset">Получить код повторно</button>
+						</div>
+						<div class="popup-item__buttons">
+							<a href="" data-fls-popup-close
+								class="popup-item__button popup-item__button--orange">Зарегистрироваться</a>
+						</div>
+						<label data-fls-checkbox class="popup-item__checkbox">
+							<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<span class="checkbox__text --icon-check">Нажимая кнопку, я даю согласие на обработку персональных
+								данных, а также подтверждаю, что ознакомлен с Политикой конфиденциальности</span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-fls-popup="resetpswd" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<button data-fls-popup-close type="button" class="popup__close"><svg width="16" height="16" viewBox="0 0 24 24"
+					fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#000" stroke-linecap="square" />
+					<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#000" stroke-linecap="square" />
+				</svg></button>
+			<div data-fls-popup-content class="popup__text popup-item">
+				<h3 class="popup-item__title title-40">Восстановление пароля</h3>
+				<p class="popup-item__description">Введите адрес электронной почты, к которому привязан аккаунт</p>
+				<form class="popup-item__form" data-fls-form="dev" data-fls-form-popup="popup" method="POST" action="#"
+					method="POST">
+					<div class="popup-item__body">
+						<div class="popup-item__column popup-item__column--code">
+							<input required type="email" name="form-reset-pswd[email]" placeholder="Электронная почта"
+								class="popup-item__input">
+							<!-- Видимость через --reset-active -->
+							<span>Запросить повторно через 45 секунд</span>
+							<button data-fls-button type="reset" class="popup-item__reset">Получить код повторно</button>
+						</div>
+						<div class="popup-item__buttons">
+							<a href="" data-fls-popup-link="newpswd"
+								class="popup-item__button popup-item__button--orange">Восстановить пароль</a>
+						</div>
+						<label data-fls-checkbox class="popup-item__checkbox">
+							<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<span class="checkbox__text --icon-check">Нажимая кнопку, я даю согласие на обработку персональных
+								данных, а также подтверждаю, что ознакомлен с Политикой конфиденциальности</span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-fls-popup="newpswd" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<button data-fls-popup-close type="button" class="popup__close"><svg width="16" height="16" viewBox="0 0 24 24"
+					fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#000" stroke-linecap="square" />
+					<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#000" stroke-linecap="square" />
+				</svg></button>
+			<div data-fls-popup-content class="popup__text popup-item">
+				<h3 class="popup-item__title title-40">Введите новый пароль</h3>
+				<form class="popup-item__form" data-fls-form="dev" data-fls-form-popup="popup" method="POST" action="#"
+					method="POST">
+					<div class="popup-item__body">
+						<div class="popup-item__column popup-item__column--code">
+							<input required type="password" name="form-newpswd[password]" placeholder="Пароль"
+								class="popup-item__input">
+							<input required type="password" name="form-newpswd[password]" placeholder="Подтвердите пароль"
+								class="popup-item__input">
+						</div>
+						<div class="popup-item__buttons">
+							<a data-fls-popup-close href="" class="popup-item__button popup-item__button--orange">Восстановить
+								пароль</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-fls-popup="addtocard" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<button data-fls-popup-close type="button" class="popup__close"><svg width="16" height="16" viewBox="0 0 24 24"
+					fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#000" stroke-linecap="square" />
+					<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#000" stroke-linecap="square" />
+				</svg></button>
+			<div data-fls-popup-content class="popup__text popup-item">
+				<h3 class="popup-item__title title-40">Добавление карты</h3>
+				<form class="popup-item__form" data-fls-form="dev" data-fls-form-popup="popup" method="POST" action="#"
+					method="POST">
+					<div class="popup-item__body">
+						<div data-fls-grid class="popup-item__column popup-item__column--grid">
+							<input data-fls-grid-col="12" required type="text" name="form-addtocard[cardnum]"
+								placeholder="Номер карты" class="popup-item__input">
+							<input data-fls-grid-col="6" required type="text" name="form--addtocard[cvv]" placeholder="CVV"
+								class="popup-item__input">
+							<input data-fls-grid-col="6" required type="text" name="form-addtocard[period]"
+								placeholder="Срок действия" class="popup-item__input">
+						</div>
+						<div class="popup-item__buttons">
+							<a data-fls-popup-close href="" class="popup-item__button popup-item__button--orange">Добавить
+								карту</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,52 @@
+.areas {
+	&__container {
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+
+	&__grid {
+	}
+}
+
+.grid-areas {
+	&__item {
+		overflow: hidden;
+		position: relative;
+		@include adaptiveValue("border-radius", 12, 6);
+		@include adaptiveValue("min-height", 345, 120);
+		&::before {
+			content: "";
+			position: absolute;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__title {
+		z-index: 1;
+		font-weight: 600;
+		position: absolute;
+		color: $whiteColor;
+		@include adaptiveValue("left", 24, 12);
+		@include adaptiveValue("top", 24, 12);
+		@include adaptiveValue("font-size", 28, 16, 1, 1920, 991.98);
+		@include adaptiveValue("font-size", 16, 12, 1, 991.98, 320);
+		@media (min-width: toEm($mobileSmall)) {
+			br {
+				display: none;
+			}
+		}
+		&--br {
+			br {
+				display: block !important;
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+	}
+}

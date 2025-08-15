@@ -1,0 +1,12 @@
+:root {
+	--main-color: #000;
+	--button-color: rgba(193, 39, 45, 1);
+	--product-color: rgba(39, 194, 80, 1);
+	--product-color-2: rgba(248, 248, 248, 1);
+	--bg-color: rgba(61, 62, 67, 1);
+	--gradient-header: linear-gradient(90deg, #3D3E43 0%, #686A73 18.44%, #3D3E43 33.93%, #3D3E43 100%);
+	--gradient-form: linear-gradient(90deg, #3D3E43 0%, #686A73 56.64%, #3D3E43 100%);
+	--filter-color: rgba(61, 62, 67, 1);
+	--bg-color2: rgba(227, 226, 230, 1);
+	--white-text: #fff;
+}

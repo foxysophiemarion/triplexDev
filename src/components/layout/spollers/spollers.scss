@@ -1,0 +1,198 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+
+// Блок со спойлерами
+.spollers {
+	display: grid;
+	gap: 15px;
+	&--catalog {
+		margin: 8px 0;
+		gap: 0;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 155%;
+			top: 0;
+			left: 24%;
+			background-color: rgba(194, 194, 194, 0.4);
+		}
+	}
+}
+// Спойлер
+.spollers__item {
+	&--catalog {
+		@media (min-width: toEm($tablet)) {
+			display: flex;
+			gap: 8px;
+		}
+	}
+}
+// Заголовок спойлера
+.spollers__title {
+	cursor: default;
+	text-align: left;
+	/*border: 1px solid #eee;*/
+	border-radius: 5px;
+	position: relative;
+	list-style: none;
+	&--header {
+		display: flex;
+		align-items: center;
+		padding: 12px;
+		padding-left: 40px;
+		transition: background-color 0.3s;
+		background-color: $buttonColor;
+		min-height: 48px;
+		width: max-content;
+		@include adaptiveValue("font-size", 16, 14);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba(168, 29, 34, 1);
+			}
+		}
+		.--spoller-init & {
+			cursor: pointer;
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 12px;
+				border-radius: 4px;
+				background-color: $whiteColor;
+				height: 2px;
+				width: 16px;
+				transition: all 0.5s ease 0s;
+			}
+			&::before {
+				top: 40%;
+			}
+			&::after {
+				bottom: 40%;
+			}
+			&.--spoller-active {
+				background-color: rgba(168, 29, 34, 1);
+				&::before {
+					top: calc(50% - 1px);
+					transform: rotate(-45deg);
+				}
+				&::after {
+					bottom: calc(50% - 1px);
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+	&--catalog {
+		font-size: 14px;
+		padding: 4px;
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		position: relative;
+		span {
+			font-size: 16px;
+			margin-left: auto;
+			&::before {
+				color: rgba(118, 119, 122, 1);
+			}
+		}
+		&::before {
+			font-size: 16px;
+			color: rgba(118, 119, 122, 1);
+		}
+		@media (min-width: toEm($tablet)) {
+			flex: 0 1 24%;
+		}
+		.--spoller-init & {
+			cursor: pointer;
+
+			&.--spoller-active {
+				background-color: $productColor2;
+			}
+			@media (min-width: toEm($tablet)) {
+				&:hover {
+					background-color: $productColor2;
+					+ .spollers__body--catalog {
+						opacity: 1;
+						transform: scale(1);
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+	&::marker,
+	&::-webkit-details-marker {
+		display: none;
+	}
+}
+
+// Контент спойлера
+.spollers__body {
+	&--header {
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		z-index: 2;
+		left: 0;
+		border-radius: 5px;
+		background-color: $whiteColor;
+		color: $mainColor;
+	}
+	&--catalog {
+		@media (min-width: toEm($tablet)) {
+			position: absolute;
+			z-index: 2;
+			width: 75%;
+			height: 100%;
+			top: 0;
+			opacity: 0;
+			transform: scale(0);
+			transform-origin: top left;
+			transition:
+				opacity 0.3s,
+				transform 0.3s,
+				visibility 0.3s;
+			visibility: hidden;
+		}
+	}
+}
+.spollers__item--catalog:hover .spollers__body--catalog {
+	opacity: 1;
+	transform: scale(1);
+	visibility: visible;
+}
+// .--spoller-init & {
+// 	position: relative;
+// 	width: 100%;
+// 	text-align: left;
+// 	&::before,
+// 	&::after {
+// 		content: "";
+// 		position: absolute;
+// 		right: 0;
+// 		top: toRem(12);
+// 		height: toRem(1);
+// 		transition: all 0.3s ease 0s;
+// 		width: toRem(10);
+// 		background-color: #000;
+// 	}
+// 	&::before {
+// 		transform: rotate(40deg);
+// 		right: toRem(7);
+// 	}
+// 	&::after {
+// 		transform: rotate(-40deg);
+// 	}
+// }
+// &.--spoller-active {
+// 	&::before {
+// 		transform: rotate(-40deg);
+// 	}
+// 	&::after {
+// 		transform: rotate(40deg);
+// 	}
+// }

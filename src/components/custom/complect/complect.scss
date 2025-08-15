@@ -1,0 +1,46 @@
+.complect {
+	&__body {
+	}
+
+	&__title {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 28, 16);
+		@include adaptiveValue("margin-bottom", 13, 10);
+	}
+
+	&__row {
+		max-width: 400px;
+		display: flex;
+		gap: 12px;
+	}
+
+	&__item {
+		flex: 0 1 33.333%;
+	}
+}
+.item-complect {
+	position: relative;
+	font-size: 12px;
+	&__card {
+	}
+
+	&__cover {
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: $productColor2;
+		margin-bottom: 4px;
+	}
+
+	&__image {
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__quantity {
+		position: absolute;
+		top: 6px;
+		right: 6px;
+	}
+}

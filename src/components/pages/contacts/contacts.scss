@@ -1,0 +1,55 @@
+.contacts-page {
+	&__content {
+		@include adaptiveValue("padding-bottom", 100, 50);
+	}
+
+	&__container {
+	}
+
+	&__body {
+	}
+
+	&__item {
+	}
+}
+.item-contact {
+	background: var(--gradient-form);
+	border-radius: 12px;
+	overflow: hidden;
+	@include adaptiveValue("padding", 32, 16);
+	color: $whiteColor;
+	display: flex;
+	flex-direction: column;
+	&__phone {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 40, 16);
+		margin-bottom: 16px;
+	}
+
+	&__mail {
+		@include adaptiveValue("font-size", 28, 12);
+	}
+
+	&__title {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 40, 16);
+		margin-bottom: 16px;
+	}
+
+	&__list {
+		@include adaptiveValue("font-size", 28, 12);
+		li {
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+	}
+}
+.item-map {
+	border-radius: 12px;
+	overflow: hidden;
+	iframe {
+		width: 100%;
+		@include adaptiveValue("height", 625, 200);
+	}
+}

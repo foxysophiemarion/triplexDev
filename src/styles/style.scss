@@ -1,0 +1,399 @@
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Подключение CSS-переменных
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@use "includes/variables.css";
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Подключение общих удаленных шрифтов (Google Fonts)
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Стили тега BODY
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+body {
+	min-width: #{$minWidth}px;
+	color: $mainColor;
+	font-family: $fontFamily;
+	font-size: #{$fontSize}px;
+
+	// Скролл заблокирован
+	[data-fls-scrolllock] & {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+	// Сайт загружен
+	[data-fls-loaded] & {
+	}
+}
+main {
+	position: relative;
+	z-index: 1;
+	transition: filter 0.4s ease;
+}
+
+main::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	opacity: 0;
+	z-index: 2; /* Помещаем ::before поверх main */
+	pointer-events: none; /* По умолчанию не взаимодействует */
+	transition: opacity 0.4s ease;
+}
+
+body:has(.spollers__title--header.--spoller-active) main {
+	filter: blur(1px);
+	pointer-events: none; /* Блокируем взаимодействие с main */
+}
+
+body:has(.spollers__title--header.--spoller-active) main::before {
+	opacity: 1;
+	pointer-events: auto; /* Разрешаем взаимодействие с ::before */
+}
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Оболочка WRAPPER
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: clip;
+	// Прижимаем footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фикс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Ограничивающий контейнер
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Стили будут применяться ко
+// всем классам, содержащим *__container
+// Например header__container, main__container и т.п.
+// Сниппет (HTML): cnt
+
+@if ($responsiveType == 1) {
+	// Отзывчивый
+	[class*="__container"] {
+		@if ($maxWidthContainer > 0) {
+			max-width: #{$maxWidthContainer}px;
+			margin: 0 auto;
+		}
+		@if ($containerPadding > 0) {
+			@if ($maxWidthContainer > 0) {
+				padding-left: #{math.div($containerPadding, 2)}px;
+				padding-right: #{math.div($containerPadding, 2)}px;
+			} @else {
+				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+			}
+		}
+	}
+
+	// Специфичные ширины контейнеров для страниц с классами page--catalog и page--product
+	main.page--catalog [class*="__container"] {
+		max-width: 1600px; // пример нужной ширины для каталога
+	}
+	main.page--product [class*="__container"] {
+		max-width: 1600px; // пример нужной ширины для продукта
+	}
+} @else {
+	// По брейкпойнтам
+	[class*="__container"] {
+		margin: 0 auto;
+		@if ($maxWidthContainer > 0) {
+			max-width: #{$maxWidthContainer}px;
+		} @else {
+			@if ($containerPadding > 0) {
+				padding-left: #{math.div($containerPadding, 2)}px;
+				padding-right: #{math.div($containerPadding, 2)}px;
+			}
+		}
+		@media (max-width: toEm($pc)) {
+			max-width: 970px;
+		}
+		@media (max-width: toEm($tablet)) {
+			max-width: 750px;
+		}
+		@media (max-width: toEm($mobile)) {
+			max-width: none;
+			@if ($containerPadding > 0 and $maxWidthContainer > 0) {
+				padding-left: #{math.div($containerPadding, 2)}px;
+				padding-right: #{math.div($containerPadding, 2)}px;
+			}
+		}
+	}
+
+	// Специфичные ширины для страниц с классами page--catalog и page--product
+	main.page--catalog [class*="__container"] {
+		max-width: 1600px;
+	}
+	main.page--product [class*="__container"] {
+		max-width: 1600px;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Общие стили для всего сайта
+.pages {
+	&__breadcrumbs {
+		@include adaptiveValue("padding-top", 72, 32);
+		@include adaptiveValue("padding-bottom", 80, 40);
+	}
+	&__brends {
+	}
+	&__content {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
+	}
+	&__gallery {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
+	}
+	&__advproducts {
+		@include adaptiveValue("padding-top", 80, 40);
+	}
+	&__specifications {
+		@include adaptiveValue("padding-top", 80, 40);
+	}
+	&__recommend {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
+	}
+	&__feedback {
+		@include adaptiveValue("padding-bottom", 80, 40);
+	}
+	&__variants {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
+	}
+}
+.breadcrumbs-pages {
+	@include adaptiveValue("padding-bottom", 40, 20);
+}
+.top-pages {
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 40, 16);
+		@media (max-width: toEm($mobile)) {
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+	}
+
+	&__title {
+		margin-bottom: 28px;
+		@media (max-width: toEm($tablet)) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 16, 12);
+		p {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 20, 16);
+			}
+		}
+	}
+
+	&__column--cover {
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	&__image {
+		@extend %ibg;
+	}
+}
+.home {
+	&__top {
+		padding-top: 20px;
+	}
+	&__popular {
+		@include adaptiveValue("padding-top", 100, 50);
+	}
+	&__areas {
+		@include adaptiveValue("padding-top", 100, 50);
+		@include adaptiveValue("padding-bottom", 100, 50);
+	}
+	&__advantages {
+		background-color: $productColor2;
+		@include adaptiveValue("padding-top", 60, 30);
+	}
+	&__feedback {
+		background-color: $productColor2;
+		@include adaptiveValue("padding-top", 100, 50);
+	}
+	&__questions {
+		background-color: $productColor2;
+		@include adaptiveValue("padding-top", 100, 50);
+		@include adaptiveValue("padding-bottom", 100, 50);
+	}
+}
+.title {
+	font-family: $fontFamily2;
+	@include adaptiveValue("font-size", 56, 20);
+}
+.title-40 {
+	font-weight: 600;
+	@include adaptiveValue("font-size", 40, 16);
+}
+.subtitle {
+	font-weight: 600;
+	@include adaptiveValue("font-size", 28, 14);
+}
+.description {
+	@include adaptiveValue("font-size", 16, 12);
+}
+.list-pages {
+	max-width: 800px;
+	&__item {
+		position: relative;
+		padding-left: 20px;
+		@include adaptiveValue("font-size", 16, 12);
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 5px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: $mainColor;
+		}
+	}
+}
+.ibg {
+	@extend %ibg;
+}
+.product-card {
+	display: flex;
+	flex-direction: column;
+
+	&:hover .product-card__cover {
+		background-color: $bgColor2;
+	}
+
+	&__cover {
+		transition: background-color 0.3s;
+		border-radius: 12px;
+		background-color: $productColor2;
+		position: relative;
+		flex: 1 1 auto;
+		@include adaptiveValue("margin-bottom", 12, 6);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__title {
+		color: $whiteColor;
+		position: absolute;
+		background-color: $productColor1;
+		@include adaptiveValue("padding-top", 8, 4);
+		@include adaptiveValue("padding-bottom", 8, 4);
+		@include adaptiveValue("padding-left", 12, 6);
+		@include adaptiveValue("padding-right", 12, 6);
+		@include adaptiveValue("border-radius", 8, 4);
+		left: 12px;
+		top: 12px;
+		@include adaptiveValue("font-size", 14, 8);
+		@media (max-width: toEm($mobile)) {
+			left: 6px;
+			top: 6px;
+		}
+	}
+
+	&__description {
+		@include adaptiveValue("font-size", 14, 10);
+		display: flex;
+		gap: 8px;
+		justify-content: space-between;
+
+		@media (max-width: toEm($pc)) {
+			flex-direction: column;
+			gap: 4px;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			white-space: wrap;
+		}
+		span {
+			&:nth-child(2) {
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+.total {
+	@include adaptiveValue("font-size", 28, 16);
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+.cart-total {
+}
+.checkout {
+	@include adaptiveValue("padding-top", 12, 8);
+	@include adaptiveValue("padding-bottom", 12, 8);
+	@include adaptiveValue("padding-right", 16, 10);
+	@include adaptiveValue("padding-left", 16, 10);
+	@include adaptiveValue("font-size", 16, 14);
+	border-radius: 8px;
+	color: $whiteColor;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	gap: 4px;
+	background-color: $buttonColor;
+	transition: background-color 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: rgba(168, 29, 34, 1);
+		}
+	}
+	&::before {
+		@include adaptiveValue("font-size", 24, 16);
+	}
+}
+
+.promo {
+	@include adaptiveValue("margin-bottom", 40, 20);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	&__input {
+		@include adaptiveValue("padding-top", 12, 8);
+		@include adaptiveValue("padding-bottom", 12, 8);
+		@include adaptiveValue("padding-right", 16, 10);
+		@include adaptiveValue("padding-left", 16, 10);
+		@include adaptiveValue("font-size", 16, 12);
+		outline: none;
+		border: 1px solid $bgColor1;
+		border-radius: 8px;
+	}
+}
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

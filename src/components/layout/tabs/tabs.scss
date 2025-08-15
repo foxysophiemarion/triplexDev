@@ -1,0 +1,95 @@
+.header-tabs {
+	display: flex;
+	gap: 40px;
+	@media (max-width: toEm($mobile)) {
+		flex-direction: column;
+		gap: 10px;
+	}
+	// .tabs__navigation
+	&__navigation {
+		white-space: nowrap;
+		flex: 0 0 24%;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		padding-right: 8px;
+		margin-top: 12px;
+		margin-bottom: 12px;
+		position: relative;
+		@include adaptiveValue("font-size", 14, 12);
+		@media (max-width: toEm($mobile)) {
+			margin-bottom: 0;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			grid-template-columns: auto;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			top: 0;
+			right: 0;
+			width: 2px;
+			background-color: $bgColor2;
+			@media (max-width: toEm($mobile)) {
+				width: 100%;
+				top: 100%;
+				height: 2px;
+			}
+		}
+	}
+	// .tabs__title
+	&__title {
+		border-radius: 4px;
+		width: 100%;
+		padding: 4px;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		transition: background-color 0.3s;
+		&::before {
+			font-size: 20px;
+			color: $bgColor1;
+		}
+		span {
+			flex: 1 1 auto;
+			font-size: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			&::before {
+				transition: transform 0.3s;
+				@media (max-width: toEm($mobile)) {
+					transform: rotate(90deg);
+				}
+			}
+		}
+		&.--tab-active {
+			background-color: $bgColor2;
+			span {
+				&::before {
+					transform: scale(-1);
+					@media (max-width: toEm($mobile)) {
+						transform: rotate(-90deg);
+					}
+				}
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $bgColor2;
+				cursor: pointer;
+			}
+		}
+	}
+	// .tabs__content
+	&__content {
+		flex: 1 1 auto;
+	}
+	// .tabs__body
+	&__body {
+		padding: toRem(12) 0;
+	}
+}

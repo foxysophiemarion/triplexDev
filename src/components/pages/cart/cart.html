@@ -1,0 +1,40 @@
+<script type="module" src="@components/pages/cart/cart.js"></script>
+<link rel="stylesheet" href="@components/pages/cart/cart.scss">
+
+
+<main class="pages page--cart cart">
+	<div data-fls-breadcrumbs class="pages__breadcrumbs breadcrumbs">
+		<div class="breadcrumbs__container">
+			<div class="breadcrumbs__body">
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Главная</a>
+				<span class="breadcrumbs__dotted"></span>
+				<span class="breadcrumbs__button breadcrumbs__button--active">Корзина</span>
+			</div>
+			<h2 class="breadcrumbs__title title">Корзина</h2>
+		</div>
+	</div>
+	<section data-fls-cart class="cart__content">
+		<div class="cart__container">
+
+			<div class="cart__body">
+
+				<!-- Список товаров -->
+				<div class="cart__items cart-items">
+
+				</div>
+				<!-- Блок с итогами -->
+				<aside class="cart__summary">
+
+					<div class="total">
+						Итого:<br><span class="cart-total">0 ₽</span>
+					</div>
+					<div class="promo">
+						<input class="promo__input" type="text" placeholder="Промокод">
+						<button class="promo__apply button">Применить</button>
+					</div>
+					<button class="checkout --icon-arrow-diagonal">К оформлению</button>
+				</aside>
+			</div>
+		</div>
+	</section>
+</main>

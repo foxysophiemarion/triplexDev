@@ -1,0 +1,133 @@
+<script type="module" src="@components/pages/pay/pay.js"></script>
+<link rel="stylesheet" href="@components/pages/pay/pay.scss">
+
+
+<main class="pages page--pay pay">
+	<div data-fls-breadcrumbs class="pages__breadcrumbs breadcrumbs">
+		<div class="breadcrumbs__container">
+			<div class="breadcrumbs__body">
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Главная</a>
+				<span class="breadcrumbs__dotted"></span>
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Корзина</a>
+				<span class="breadcrumbs__dotted"></span>
+				<span class="breadcrumbs__button breadcrumbs__button--active">Оформление заказа</span>
+			</div>
+			<h2 class="breadcrumbs__title title">Оформление заказа</h2>
+		</div>
+	</div>
+	<section data-fls-cart class="pay__content">
+		<div class="pay__container">
+			<div class="pay__body">
+				<div class="pay__items pay-items">
+					<div class="pay-item">
+						<h4 class="pay-item__title title-40">Покупатель</h4>
+						<div data-fls-tabs class="popular-tabs">
+							<nav data-fls-tabs-titles class="popular-tabs__navigation">
+								<button type="button" class="popular-tabs__title --tab-active">Физическое лицо</button>
+								<button type="button" class="popular-tabs__title">Юридическое лицо</button>
+							</nav>
+							<div data-fls-tabs-body class="tabs__content">
+								<div class="tabs__body">
+									<form class="tabs__form form-tabs" data-fls-form="dev" method="POST" action="#"
+										method="POST">
+										<div data-fls-grid class="form-tabs__body">
+											<input data-fls-grid-col="6" data-fls-grid-col-small="12" type="text"
+												name="form-pay[name]" placeholder="Имя" class="form-tabs__input">
+											<input data-fls-grid-col="6" data-fls-grid-col-small="12"
+												data-fls-input-mask="+7(999) 999-9999" required type="tel" name="form-pay[phone]"
+												data-fls-form-errtext="Введите номер" placeholder="Телефон*"
+												class="form-tabs__input">
+											<input data-fls-grid-col="6" data-fls-grid-col-small="12" required data-fls-input
+												autocomplete="off" type="email" name="form-pay[email]"
+												data-fls-form-errtext="Введите Email" placeholder="Электронная почта*"
+												class="form-tabs__input">
+										</div>
+									</form>
+								</div>
+								<div class="tabs__body">
+									<form class="tabs__form form-tabs" data-fls-form="dev" method="POST" action="#"
+										method="POST">
+										<div data-fls-grid class="form-tabs__body">
+											<input data-fls-grid-col="6" data-fls-grid-col-small="12" type="text"
+												name="form-pay[name]" placeholder="Название компании" class="form-tabs__input">
+											<input data-fls-grid-col="6" data-fls-grid-col-small="12" required data-fls-input
+												autocomplete="off" type="email" name="form-pay[email]"
+												data-fls-form-errtext="Введите Email" placeholder="Электронная почта*"
+												class="form-tabs__input">
+											<input data-fls-grid-col="6" data-fls-grid-col-small="12"
+												data-fls-input-mask="+7(999) 999-9999" required type="tel" name="form-pay[phone]"
+												data-fls-form-errtext="Введите номер" placeholder="Телефон*"
+												class="form-tabs__input">
+											<input data-fls-grid-col="6" data-fls-grid-col-small="12" type="text"
+												name="form-pay[inn]" placeholder="ИНН" class="form-tabs__input">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pay-item">
+						<h4 class="pay-item__title title-40">Способ оплаты</h4>
+						<div class="pay-item__row pay-method">
+							<a href="" data-fls-popup-link="addtocard" class="pay-method__item"><img src="@img/pay/addcard.svg"
+									alt="Изображение"><span>Добавить
+									карту</span></a>
+							<a href="" class="pay-method__item"><img src="@img/pay/sbp.svg"
+									alt="Изображение"><span>СБП</span></a>
+							<a href="" class="pay-method__item"><img src="@img/pay/tbank.svg" alt="Изображение"><span>MIR ••
+									3152</span></a>
+							<a href="" class="pay-method__item"><img src="@img/pay/perevod.svg" alt="Изображение"><span>Прямой
+									перевод</span></a>
+						</div>
+					</div>
+					<div class="pay-item">
+						<h4 class="pay-item__title title-40">Способ доставки</h4>
+						<div class="pay-item__row delivery-method">
+							<div data-fls-radio class="delivery-method__options">
+								<label class="options__item">
+									<input class="options__input" checked type="radio" value="1" name="option">
+									<span class="options__text">Пункт выдачи СДЭК</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="radio" value="2" name="option">
+									<span class="options__text">Постмат СДЭК</span>
+								</label>
+							</div>
+							<a data-fls-button href="#" class="delivery-method__button checkout">Выбрать ПВЗ</a>
+						</div>
+					</div>
+				</div>
+				<!-- Блок с итогами -->
+				<aside class="pay__summary">
+					<div class="total">
+						Итого:<br><span class="cart-total">0 ₽</span>
+					</div>
+					<div class="total-product">
+						Товары:<span class="cart-total">0 ₽</span>
+					</div>
+					<div class="price-delivery">
+						Доставка:<span class="delivery-total">500 ₽</span>
+					</div>
+					<div class="promo">
+						<input class="promo__input" type="text" placeholder="Промокод">
+						<button class="promo__apply button">Применить</button>
+					</div>
+					<button class="checkout">Оформить заказ</button>
+					<label data-fls-grid-col="8" data-fls-grid-col-tablet="12" data-fls-checkbox
+						class="feedback-page__checkbox checkbox">
+						<input required data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+							name="form[privacy-check]">
+						<span class="checkbox__text --icon-check">Нажимая кнопку, я даю согласие на
+							обработку персональных
+							данных, а
+							также
+							подтверждаю, что ознакомлен с Политикой конфиденциальности</span>
+					</label>
+				</aside>
+			</div>
+			<div class="cdekapi">
+				<!-- Тут будет карта пунктов выдачи СДЭК -->
+			</div>
+		</div>
+	</section>
+</main>

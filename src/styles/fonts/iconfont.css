@@ -1,0 +1,98 @@
+@font-face {
+font-family: "iconfont";
+font-display: swap;
+src: url("D://Front/2025/Projects/startFLS4/src/assets/svgicons/preview/iconfont.woff2?f62cb15efb5131ffddee8c02b2815bed") format("woff2");
+}
+[class*="--icon-"]::before {
+font-family: iconfont;
+}
+[class*="--icon-wa"]::before {
+content: "\f101";
+}
+[class*="--icon-vk"]::before {
+content: "\f102";
+}
+[class*="--icon-trash"]::before {
+content: "\f103";
+}
+[class*="--icon-tg"]::before {
+content: "\f104";
+}
+[class*="--icon-stable"]::before {
+content: "\f105";
+}
+[class*="--icon-spoller-right"]::before {
+content: "\f106";
+}
+[class*="--icon-semicircles"]::before {
+content: "\f107";
+}
+[class*="--icon-search"]::before {
+content: "\f108";
+}
+[class*="--icon-samokat"]::before {
+content: "\f109";
+}
+[class*="--icon-reset"]::before {
+content: "\f10a";
+}
+[class*="--icon-profile"]::before {
+content: "\f10b";
+}
+[class*="--icon-peoples"]::before {
+content: "\f10c";
+}
+[class*="--icon-pdf"]::before {
+content: "\f10d";
+}
+[class*="--icon-optic"]::before {
+content: "\f10e";
+}
+[class*="--icon-micro"]::before {
+content: "\f10f";
+}
+[class*="--icon-lightning"]::before {
+content: "\f110";
+}
+[class*="--icon-joystick"]::before {
+content: "\f111";
+}
+[class*="--icon-gh"]::before {
+content: "\f112";
+}
+[class*="--icon-gear"]::before {
+content: "\f113";
+}
+[class*="--icon-fullscreen"]::before {
+content: "\f114";
+}
+[class*="--icon-fpv"]::before {
+content: "\f115";
+}
+[class*="--icon-electric"]::before {
+content: "\f116";
+}
+[class*="--icon-check"]::before {
+content: "\f117";
+}
+[class*="--icon-cart"]::before {
+content: "\f118";
+}
+[class*="--icon-carbon"]::before {
+content: "\f119";
+}
+[class*="--icon-box"]::before {
+content: "\f11a";
+}
+[class*="--icon-arrow-spoller"]::before {
+content: "\f11b";
+}
+[class*="--icon-arrow-right"]::before {
+content: "\f11c";
+}
+[class*="--icon-arrow-diagonal"]::before {
+content: "\f11d";
+}
+[class*="--icon-arrow-bold"]::before {
+content: "\f11e";
+}

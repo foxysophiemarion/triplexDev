@@ -1,0 +1,67 @@
+.hover {
+	&__wrapper {
+	}
+
+	&__link {
+	}
+
+	&__item {
+	}
+
+	&__sublist {
+	}
+
+	&__title {
+		font-weight: 600;
+		margin-bottom: 12px;
+		@include adaptiveValue("font-size", 28, 16);
+	}
+
+	&__subtitle {
+		margin-bottom: 12px;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 16, 14);
+	}
+
+	&__brends {
+	}
+}
+
+.sublist-hover {
+	column-count: 2;
+
+	max-width: 450px;
+	@include adaptiveValue("gap", 16, 10);
+	@include adaptiveValue("margin-bottom", 40, 10);
+	&__item {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 8, 4);
+		}
+	}
+	&__link {
+		@include adaptiveValue("font-size", 14, 10);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.brends-hover {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: repeat(8, 1fr);
+	@include adaptiveValue("gap", 16, 4);
+	@media (max-width: toEm($pc)) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	&__item {
+		filter: saturate(0);
+		transition: filter 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				filter: saturate(1);
+			}
+		}
+	}
+}

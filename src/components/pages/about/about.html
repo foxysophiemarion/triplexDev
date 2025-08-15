@@ -1,0 +1,98 @@
+<script type="module" src="@components/pages/about/about.js"></script>
+<link rel="stylesheet" href="@components/pages/about/about.scss">
+
+
+<main class="pages page--about about-page">
+	<div data-fls-breadcrumbs class="pages__breadcrumbs breadcrumbs breadcrumbs-pages">
+		<div class="breadcrumbs__container">
+			<div class="breadcrumbs__body">
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Главная</a>
+				<span class="breadcrumbs__dotted"></span>
+				<span class="breadcrumbs__button breadcrumbs__button--active">О компании</span>
+			</div>
+		</div>
+	</div>
+	<section class="about-page__top top-pages">
+		<div class="top-pages__container">
+			<div class="top-pages__body">
+				<div class="top-pages__column">
+					<h2 data-fls-dynamic=".breadcrumbs__container,991.98" class="top-pages__title title">О компании</h2>
+					<div class="top-pages__text">
+						<p>Компания ООО «Триплекс» была основана в Удмуртской Республике как ответ на растущий спрос на
+							надёжные комплектующие и инженерные решения в сфере беспилотных технологий. Первоначально
+							специализируясь на поставках электронных компонентов, мы быстро поняли необходимость создания
+							собственного производства, чтобы обеспечить контроль над качеством и сократить сроки выполнения
+							заказов.</p>
+						<p>
+							С 2020 года компания активно развивает производственную базу, осваивая технологии 3D-печати сложных
+							деталей, композитную обработку и выпуск серийных изделий. Одним из ключевых направлений стал выпуск
+							лопастей и пропеллеров для БПЛА, что позволило нам выстроить надёжное партнёрство с ведущими
+							производителями беспилотников в регионе.</p>
+					</div>
+				</div>
+				<div class="top-pages__column top-pages__column--cover">
+					<img class="top-pages__image ibg" src="@img/about/cover.png" alt="Изображение">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about-page__director director">
+		<div class="director__container">
+			<div class="director__body">
+				<div class="director__column column-director">
+					<div class="column-director__cover"><img class="column-director__image ibg" src="@img/about/director.png"
+							alt="Изображение"></div>
+					<h5 class="column-director__title">Мокрушин Дмитрий Юрьевич </h5>
+					<h6 class="column-director__subtitle">Директор ООО «Триплекс»</h6>
+				</div>
+				<div class="director__text">
+					<h4 class="director__title title-40">Развиваем сеть поставок</h4>
+					<div class="director__description">
+						<p>Параллельно мы расширили сеть прямых поставок электронных компонентов, модулей и оптоэлектроники из
+							Китая и стран Европы, наладив логистику с поставками в срок от 3 до 10 дней. Сегодня «Триплекс»
+							совмещает инженерную экспертизу с гибкой системой снабжения, обслуживая как крупные производства,
+							так
+							и частные заказы в минимальных партиях.</p>
+						<p>Мы развиваемся вместе с нашими клиентами, делая упор на технологичность, надёжность и скорость</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about-page__adv adv-about">
+		<div class="adv-about__container">
+			<h3 class="adv-about__title title-40">Почему выбирают нас</h3>
+			<div data-fls-grid class="adv-about__body">
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="12" class="adv-about__item item-adv-about">
+					<div class="item-adv-about__top">
+						<p>> 1 000 000</p><span>Единиц товара</span>
+					</div>
+					<div class="item-adv-about__bottom">У нас широкий ассортимент компонентов: микросхемы, сенсоры, платы,
+						специализированные модули и многое другое.</div>
+				</div>
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="adv-about__item item-adv-about">
+					<div class="item-adv-about__top">
+						<p>3 - 10</p><span>Дней</span>
+					</div>
+					<div class="item-adv-about__bottom">Составляет срок поставки товаров. Доставка осуществляется напрямую от
+						китайский и европейских производителей</div>
+				</div>
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="adv-about__item item-adv-about">
+					<div class="item-adv-about__top">
+						<p>> 10</p><span>Видов лопастей для БПЛА</span>
+					</div>
+					<div class="item-adv-about__bottom">Мы самостоятельно производим лопасти из угленаполненного полиамида и
+						других полимерных материалов, с применением 3D-печати любой сложности</div>
+				</div>
+			</div>
+			<div class="adv-about__description">Являемся партнером крупнейших производителей БПЛА в Удмуртской Республике.
+				Предлагаем Вам рассмотреть возможное сотрудничество, гарантируем лучшую цену на собственные изделия,
+				короткие сроки поставки импортных комплектующих, низкие цены. Готовы к поставкам труднодоступных
+				комплектующих, работе с партиями от 5 ед. Возможна работа в пост- и предоплату.</div>
+			<a data-fls-button href="#" class="adv-about__button button --icon-arrow-diagonal">О сотрудничестве</a>
+		</div>
+	</section>
+	<include src="@components/custom/feedback/feedback.html"></include>
+</main>

@@ -1,0 +1,41 @@
+<script type="module" src="@components/pages/contacts/contacts.js"></script>
+<link rel="stylesheet" href="@components/pages/contacts/contacts.scss">
+
+
+<main class="pages page--contacts contacts-page">
+	<div data-fls-breadcrumbs class="pages__breadcrumbs breadcrumbs breadcrumbs-pages">
+		<div class="breadcrumbs__container">
+			<div class="breadcrumbs__body">
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Главная</a>
+				<span class="breadcrumbs__dotted"></span>
+				<span class="breadcrumbs__button breadcrumbs__button--active">Контакты</span>
+			</div>
+			<h2 class="breadcrumbs__title title">Контакты</h2>
+		</div>
+	</div>
+	<section class="contacts-page__content">
+		<div class="contacts-page__container">
+			<div data-fls-grid class="contacts-page__body">
+				<div data-fls-grid-col="6" data-fls-grid-col-mobile="12" class="contacts-page__item item-contact">
+					<a href="" class="item-contact__phone">+7 (912) 853-87-77</a>
+					<a href="" class="item-contact__mail">triplex.office@mail.ru </a>
+				</div>
+				<div data-fls-grid-col="6" data-fls-grid-col-mobile="12" class="contacts-page__item item-contact">
+					<h6 class="item-contact__title">Данные юр лица</h6>
+					<ul class="item-contact__list">
+						<li>Адрес: г. Ижевск, ул. Пушкинская, д. 268, помещение 60</li>
+						<li>ИНН: 1841105035</li>
+						<li>КПП: 184101001</li>
+						<li>ОГРН: 1221800010332</li>
+					</ul>
+				</div>
+				<div data-fls-grid-col="12" class="contacts-page__item item-map">
+					<iframe
+						src="https://yandex.ru/map-widget/v1/?um=constructor%3A51c47b9bf6f73c34fb5b8db95673dd4f61a54bde0e69bf0acfba577fb0cab639&amp;source=constructor&scroll=false"
+						frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+	<include src="@components/custom/feedback/feedback.html"></include>
+</main>

@@ -1,0 +1,55 @@
+.home {
+}
+.advantages {
+	&__container {
+	}
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	&__description {
+		max-width: 560px;
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+
+	&__item {
+		border-radius: toRem(12);
+		overflow: hidden;
+		background-color: $whiteColor;
+		@include adaptiveValue("height", 345, 300, 1, 1920, 991.98);
+	}
+}
+
+.item-adv {
+	display: flex;
+	gap: 16px;
+	flex-direction: column;
+	justify-content: space-between;
+	@include adaptiveValue("padding", 24, 12);
+	&__image {
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 28, 16);
+		&::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include adaptiveValue("min-width", 48, 32);
+			color: $whiteColor;
+			border-radius: 50%;
+			padding: toRem(5);
+			background-color: $mainColor;
+			@include adaptiveValue("font-size", 32, 18);
+		}
+	}
+
+	&__description {
+		@include adaptiveValue("font-size", 16, 12);
+	}
+}

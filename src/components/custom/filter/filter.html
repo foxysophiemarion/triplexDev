@@ -1,0 +1,413 @@
+<section data-fls-filter class="pages__content content-catalog">
+	<div data-fls-grid class="content-catalog__container">
+		<div data-fls-grid-col-start="11" data-fls-grid-col-end="12" data-fls-grid-col-tablet="4"
+			data-fls-grid-row-start-tablet="2" data-fls-grid-col-mobile="6" data-fls-grid-col-small="12"
+			class="content-catalog__select">
+			<select name="filter-form[select]" form="filter-form" data-fls-select data-fls-select-modif="form">
+				<option value="1" selected>По популярности</option>
+				<option value="2">Сначала дешевые</option>
+				<option value="3">Сначала дорогие</option>
+			</select>
+		</div>
+		<aside data-fls-grid-col="3" data-fls-grid-row-start="2" data-fls-grid-col-tablet="12"
+			data-fls-grid-row-start-tablet="1" class="content-catalog__filter filter">
+			<form id="filter-form" class="filter__form" action="#" method="get">
+				<div class="filter__fromdo fromdo">
+					<div class="fromdo__title title-filter">Стоимость, ₽</div>
+					<div class="fromdo__body">
+						<input data-fls-input autocomplete="off" type="text" name="filter-form[price_min]" data-error="Ошибка"
+							placeholder="От" class="fromdo__input input-filter">
+						<input data-fls-input autocomplete="off" type="text" name="filter-form[price_max]" data-error="Ошибка"
+							placeholder="До" class="fromdo__input input-filter">
+					</div>
+				</div>
+				<div data-fls-radio class="filter__options options">
+					<div class="options__title title-filter">Стоимость, ₽</div>
+					<label class="options__item">
+						<input class="options__input" type="radio" value="1" name="filter-form[option]">
+						<span class="options__text">До 3 000 ₽</span>
+					</label>
+					<label class="options__item">
+						<input class="options__input" type="radio" value="2" name="filter-form[option]">
+						<span class="options__text">От 3 000 до 10 000 ₽</span>
+					</label>
+					<label class="options__item">
+						<input class="options__input" type="radio" value="2" name="filter-form[option]">
+						<span class="options__text">От 10 000 до 50 000 ₽</span>
+					</label>
+					<label class="options__item">
+						<input class="options__input" type="radio" value="2" name="filter-form[option]">
+						<span class="options__text">Более 50 000 ₽</span>
+					</label>
+				</div>
+				<div class="filter__search search">
+					<div class="search__title title-filter">Бренд</div>
+					<div class="search__body">
+						<input data-fls-input type="search" name="filter-form[search]" data-error="Ошибка" placeholder="Найти"
+							class="search__input input-filter">
+					</div>
+					<div class="search__options">
+						<div data-fls-showmore class="search__showmore">
+							<div data-fls-showmore-content="160" class="search__content body-filter">
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="Autel" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">Autel</span>
+								</label>
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="Art-Tech" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">Art-Tech</span>
+								</label>
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="BetaFPV" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">BetaFPV</span>
+								</label>
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="Copterparts" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">Copterparts</span>
+								</label>
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="DarwinFPV" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">DarwinFPV</span>
+								</label>
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="Diatone" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">Diatone</span>
+								</label>
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="DJI" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">DJI</span>
+								</label>
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="EFT" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">EFT</span>
+								</label>
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="FIMI" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">FIMI</span>
+								</label>
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="FYXL" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">FYXL</span>
+								</label>
+								<label data-fls-checkbox class="search__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input search__input" type="checkbox"
+										value="GEPRC" name="filter-form[brend]">
+									<span class="checkbox-search__text checkbox-filter__text">GEPRC</span>
+								</label>
+							</div>
+							<button hidden data-fls-showmore-button type="button"
+								class="search__more --icon-spoller-right"><span>Еще</span><span>Свернуть</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="filter__time time-filter">
+					<div class="time-filter__title title-filter">Время полета</div>
+					<div class="time-filter__body body-filter">
+						<label data-fls-checkbox class="time-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox" value="До 15 минут"
+								name="filter-form[time]">
+							<span class="checkbox-filter__text">До 15 минут</span>
+						</label>
+						<label data-fls-checkbox class="time-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox" value="15 - 30 минут"
+								name="filter-form[time]">
+							<span class="checkbox-filter__text">15 - 30 минут</span>
+						</label>
+						<label data-fls-checkbox class="time-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox" value="30 минут - 4 часа"
+								name="filter-form[time]">
+							<span class="checkbox-filter__text">30 минут - 4 часа</span>
+						</label>
+						<label data-fls-checkbox class="time-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox" value="4 - 10 часов"
+								name="filter-form[time]">
+							<span class="checkbox-filter__text">4 - 10 часов</span>
+						</label>
+						<label data-fls-checkbox class="time-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox" value="10 - 24 часа"
+								name="filter-form[time]">
+							<span class="checkbox-filter__text">10 - 24 часа</span>
+						</label>
+					</div>
+				</div>
+				<div class="filter__quality quality-filter">
+					<div class="quality-filter__title title-filter">Качество съемки</div>
+					<div class="quality-filter__body body-filter">
+						<label data-fls-checkbox class="quality-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox"
+								value="Full HD (1920x1080)" name="filter-form[quality]">
+							<span class="checkbox-filter__text">Full HD (1920x1080)</span>
+						</label>
+						<label data-fls-checkbox class="quality-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox" value="4К (3840x2160)"
+								name="filter-form[quality]">
+							<span class="checkbox-filter__text">4К (3840x2160)</span>
+						</label>
+					</div>
+				</div>
+				<div class="filter__battery battery-filter">
+					<div class="battery-filter__title title-filter">Емкость аккумулятора (мАч)</div>
+					<div class="battery-filter__body body-filter">
+						<label data-fls-checkbox class="battery-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox" value="Менее 500"
+								name="filter-form[battery]">
+							<span class="checkbox-filter__text">Менее 500</span>
+						</label>
+						<label data-fls-checkbox class="battery-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox" value="500 - 10 000"
+								name="filter-form[battery]">
+							<span class="checkbox-filter__text">500 - 10 000</span>
+						</label>
+						<label data-fls-checkbox class="battery-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox" value="10 000 - 100 000"
+								name="filter-form[battery]">
+							<span class="checkbox-filter__text">10 000 - 100 000</span>
+						</label>
+						<label data-fls-checkbox class="battery-filter__checkbox checkbox-filter">
+							<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox" value="Более 100 000"
+								name="filter-form[battery]">
+							<span class="checkbox-filter__text">Более 100 000</span>
+						</label>
+					</div>
+				</div>
+				<div class="filter__additionally additionally">
+					<div class="additionally__title title-filter">Дополнительные возможности</div>
+					<div class="additionally__options">
+						<div data-fls-showmore class="additionally__showmore">
+							<div data-fls-showmore-content="160" class="additionally__content body-filter">
+								<label data-fls-checkbox class="additionally__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox"
+										value="Видео высокой четкости" name="filter-form[additionally]">
+									<span class="checkbox-filter__text">Видео высокой четкости</span>
+								</label>
+								<label data-fls-checkbox class="additionally__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox"
+										value="Автовзлет и посадка" name="filter-form[additionally]">
+									<span class="checkbox-filter__text">Автовзлет и посадка</span>
+								</label>
+								<label data-fls-checkbox class="additionally__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox"
+										value="Полет по заданной траектории" name="filter-form[additionally]">
+									<span class="checkbox-filter__text">Полет по заданной траектории</span>
+								</label>
+								<label data-fls-checkbox class="additionally__checkbox checkbox-filter">
+									<input data-error="Ошибка" class="checkbox-filter__input" type="checkbox"
+										value="Более 100 000" name="filter-form[additionally]">
+									<span class="checkbox-filter__text">Более 100 000</span>
+								</label>
+							</div>
+							<button hidden data-fls-showmore-button type="button"
+								class="search__more --icon-spoller-right"><span>Еще</span><span>Свернуть</span></button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</aside>
+		<div data-fls-grid-col="9" data-fls-grid-col-tablet="12" class="content-catalog__products products">
+			<div class="products__body" data-fls-grid>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+				<a href="" class="products__item product-card" data-fls-grid-col="3" data-fls-grid-col-tablet="4"
+					data-fls-grid-col-mobile="6">
+					<figure class="product-card__cover">
+						<h6 class="product-card__title">Водонепроницаемые дроны</h6>
+						<img src="@img/catalog/product.png" alt="Изображение">
+					</figure>
+					<figcaption class="product-card__description"><span>Квадрокоптер JSI D15
+							Enterprise</span><span>1 914
+							000
+							₽</span>
+					</figcaption>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

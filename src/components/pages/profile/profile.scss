@@ -1,0 +1,261 @@
+.profile {
+	background-color: $productColor2;
+	@include adaptiveValue("padding-bottom", 80, 40);
+	&__content {
+	}
+}
+
+.content-profile {
+	&__container {
+	}
+
+	&__body {
+	}
+
+	&__tabs {
+	}
+}
+.tabs-profile {
+	display: flex;
+	gap: 60px;
+	@include adaptiveValue("gap", 60, 20, 1, 1920, 991.98);
+	@include adaptiveValue("gap", 30, 16, 1, 991.98, 320);
+	@media (max-width: toEm($mobile)) {
+		flex-direction: column;
+	}
+
+	&__navigation {
+		flex: 0 0 25%;
+		display: flex;
+		flex-direction: column;
+		background-color: $whiteColor;
+		border-radius: 12px;
+		padding: 12px;
+		height: max-content;
+	}
+
+	&__title {
+		@include adaptiveValue("padding-top", 12, 8);
+		@include adaptiveValue("padding-bottom", 12, 8);
+		@include adaptiveValue("padding-right", 16, 10);
+		@include adaptiveValue("padding-left", 16, 10);
+		border-radius: 8px;
+		text-align: left;
+		transition:
+			color 0.3s,
+			background-color 0.3s;
+		@include adaptiveValue("font-size", 16, 12);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+				background-color: $productColor2;
+			}
+		}
+		&.--tab-active {
+			color: $whiteColor;
+			background-color: $buttonColor;
+		}
+	}
+
+	&__quit {
+	}
+
+	&__content {
+		flex: 1 1 auto;
+	}
+
+	&__body {
+	}
+}
+.col-tabs {
+	border-radius: 12px;
+	background-color: $whiteColor;
+	@include adaptiveValue("padding", 32, 16);
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+}
+.tab-contact {
+	&__col {
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 28, 16);
+	}
+
+	&__body {
+	}
+
+	&__left {
+	}
+
+	&__fields {
+	}
+
+	&__item {
+	}
+
+	&__text {
+		display: inline-block;
+		@include adaptiveValue("font-size", 16, 10);
+		margin-bottom: 8px;
+	}
+
+	&__input {
+		@include adaptiveValue("padding-top", 12, 8);
+		@include adaptiveValue("padding-bottom", 12, 8);
+		@include adaptiveValue("padding-right", 16, 10);
+		@include adaptiveValue("padding-left", 16, 10);
+		border-radius: 8px;
+		border: 1px solid $bgColor1;
+		outline: none;
+		@include adaptiveValue("font-size", 16, 12);
+	}
+
+	&__button {
+		min-height: auto;
+		@include adaptiveValue("padding-top", 12, 8);
+		@include adaptiveValue("padding-bottom", 12, 8);
+		@include adaptiveValue("padding-right", 16, 10);
+		@include adaptiveValue("padding-left", 16, 10);
+		align-self: flex-end;
+		@include adaptiveValue("font-size", 16, 12);
+	}
+
+	&__viewpass-btn {
+	}
+}
+
+.tab-orders {
+	&__col {
+	}
+
+	&__row {
+		display: flex;
+		gap: 16px;
+		align-items: center;
+		@include adaptiveValue("margin-bottom", 28, 16);
+		@media (max-width: toEm($mobileSmall)) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__left {
+		flex: 1 1 auto;
+	}
+
+	&__title {
+		font-weight: 600;
+		margin-bottom: 8px;
+		@include adaptiveValue("font-size", 28, 16);
+	}
+
+	&__num {
+		color: rgba(61, 62, 67, 1);
+		@include adaptiveValue("font-size", 16, 12);
+	}
+
+	&__sum {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 28, 16);
+	}
+
+	&__delivery {
+		@include adaptiveValue("font-size", 16, 12);
+		@include adaptiveValue("margin-bottom", 20, 16);
+	}
+
+	&__address {
+		margin-bottom: 8px;
+	}
+
+	&__date {
+		@include adaptiveValue("font-size", 16, 12);
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__status {
+		@include adaptiveValue("margin-bottom", 28, 16);
+		@include adaptiveValue("padding-top", 12, 8);
+		@include adaptiveValue("padding-bottom", 12, 8);
+		@include adaptiveValue("padding-right", 16, 10);
+		@include adaptiveValue("padding-left", 16, 10);
+		width: max-content;
+		background-color: $buttonColor;
+		color: $whiteColor;
+		border-radius: 8px;
+	}
+
+	&__product {
+		img {
+			max-width: 80px;
+		}
+	}
+}
+
+.product-order {
+	&__item {
+		border-radius: 8px;
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		background-color: $productColor2;
+		padding: 0 8px;
+		@media (max-width: toEm($pc)) {
+			grid-column: span 4;
+		}
+		@media (max-width: toEm($tablet)) {
+			grid-column: span 6;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			grid-column: span 12;
+		}
+	}
+	&__text {
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 16, 14);
+		margin-bottom: 4px;
+	}
+
+	&__quantity {
+		color: rgba(61, 62, 67, 1);
+		@include adaptiveValue("font-size", 14, 10);
+	}
+}
+.pay-tabs {
+	&__item {
+		@include adaptiveValue("padding", 32, 16);
+		background-color: $whiteColor;
+		border-radius: 12px;
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 28, 16);
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		@media (max-width: toEm($mobileSmall)) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0;
+		}
+	}
+}
+
+.pay-tabs-method {
+	&__item {
+		@include adaptiveValue("font-size", 16, 12);
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 8px;
+	}
+}

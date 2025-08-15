@@ -1,0 +1,26 @@
+<script type="module" src="@components/pages/home/home.js"></script>
+<link rel="stylesheet" href="@components/pages/home/home.scss">
+
+
+<main class="pages page--home">
+	<include src="@components/custom/topmain/topmain.html"></include>
+	<section class="home__carousel carousel-home">
+		<div class="carousel-home__container">
+			<div data-fls-slider class="carousel-home__slider swiper">
+				<!-- Часть слайдера, которая движется -->
+				<div class="carousel-home__wrapper swiper-wrapper">
+					<!-- Слайд -->
+					<include src="@components/layout/slider/slider-item.html"></include>
+				</div>
+				<!-- Если нужна навигация (влево/вправо) -->
+				<button type="button" class="swiper-button-prev --icon-spoller-right"></button>
+				<button type="button" class="swiper-button-next --icon-spoller-right"></button>
+			</div>
+		</div>
+	</section>
+	<include src="@components/custom/popular/popular.html"></include>
+	<include src="@components/custom/areas/areas.html"></include>
+	<include src="@components/custom/advantages/advantages.html"></include>
+	<include src="@components/custom/feedbackhome/feedbackhome.html"></include>
+	<include src="@components/custom/questions/questions.html"></include>
+</main>

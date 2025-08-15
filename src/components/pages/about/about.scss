@@ -1,0 +1,147 @@
+.about-page {
+	&__top {
+	}
+	&__director {
+		@include adaptiveValue("padding-top", 40, 20);
+	}
+	&__adv {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
+	}
+}
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.director {
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 60, 20);
+		@media (max-width: toEm($mobileSmall)) {
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		flex: 0 1 30%;
+		@media (max-width: toEm($tablet)) {
+			flex: 0 1 50%;
+		}
+	}
+
+	&__text {
+		flex: 0 1 50%;
+	}
+	&__description {
+		@include adaptiveValue("font-size", 16, 12);
+		p {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 20, 12);
+			}
+		}
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 28, 16);
+	}
+}
+.column-director {
+	&__cover {
+		border-radius: 12px;
+		overflow: hidden;
+		margin-bottom: 16px;
+		position: relative;
+		&::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			background: var(--gradient-form);
+		}
+	}
+
+	&__image {
+	}
+
+	&__title {
+		margin-bottom: 8px;
+		@include adaptiveValue("font-size", 28, 16);
+	}
+
+	&__subtitle {
+		@include adaptiveValue("font-size", 16, 12);
+	}
+}
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.adv-about {
+	&__container {
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 28, 16);
+	}
+
+	&__body {
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		border-radius: 12px;
+		background-color: $productColor2;
+		@include adaptiveValue("padding", 20, 10);
+		height: 260px;
+		@media (max-width: toEm($tablet)) {
+			height: auto;
+			gap: 20px;
+		}
+	}
+
+	&__description {
+		max-width: 720px;
+		@include adaptiveValue("margin-bottom", 40, 20);
+		@include adaptiveValue("font-size", 16, 12);
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		flex-direction: row-reverse;
+		&::before {
+			font-size: 22px;
+		}
+	}
+}
+
+.item-adv-about {
+	&__top {
+		justify-self: flex-end;
+		justify-items: flex-end;
+		flex: 1 1 auto;
+
+		p {
+			font-family: "FiraCode";
+			@include adaptiveValue("font-size", 54, 24);
+		}
+		span {
+			display: block;
+			@include adaptiveValue("font-size", 20, 14);
+		}
+	}
+
+	&__bottom {
+		font-size: 16px;
+		@include adaptiveValue("font-size", 16, 12, 1, 1920, 991.98);
+		@include adaptiveValue("font-size", 16, 14, 1, 991.98, 320);
+		@media (max-width: toEm($tablet)) {
+			max-width: 420px;
+		}
+	}
+}

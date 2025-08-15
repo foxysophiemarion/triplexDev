@@ -1,0 +1,74 @@
+.brends {
+	&--lvlone {
+		padding-top: 26px;
+	}
+	&__container {
+	}
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	&__slider {
+		position: relative;
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+		background-color: $productColor2;
+		border-radius: 8px;
+		overflow: hidden;
+		transition: background-color 0.3s;
+		img {
+			width: 100%;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $bgColor2;
+			}
+		}
+	}
+}
+.swiper-button-preview,
+.swiper-button-nextus {
+	background-color: $whiteColor;
+	border-radius: toRem(8);
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 35%;
+	font-size: 24px;
+	padding: toRem(7) toRem(10);
+	@include adaptiveValue("padding-top", 7, 3);
+	@include adaptiveValue("padding-bottom", 7, 3);
+	@include adaptiveValue("padding-right", 10, 5);
+	@include adaptiveValue("padding-left", 10, 5);
+	border: 1px solid $mainColor;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $mainColor;
+			color: $whiteColor;
+		}
+	}
+}
+
+.swiper-button-preview {
+	left: 16px;
+	transform: rotate(180deg);
+	@media (max-width: toEm($mobileSmall)) {
+		left: 12px;
+	}
+}
+.swiper-button-nextus {
+	right: 16px;
+	@media (max-width: toEm($mobileSmall)) {
+		right: 12px;
+	}
+}

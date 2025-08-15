@@ -1,0 +1,179 @@
+.content-catalog {
+	&__filter {
+	}
+}
+.filter {
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__fromdo {
+	}
+
+	&__options {
+	}
+
+	&__search {
+	}
+}
+.fromdo {
+	&__title {
+	}
+	&__body {
+		display: flex;
+		gap: 8px;
+		@media (max-width: toEm($mobileSmall)) {
+			flex-direction: column;
+		}
+	}
+
+	&__input {
+	}
+}
+.title-filter {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 8px;
+	@include adaptiveValue("font-size", 16, 14);
+}
+.input-filter {
+	outline: none;
+	padding: 12px 16px;
+	border-radius: 8px;
+	border: 1px solid rgba(227, 226, 230, 1);
+	@include adaptiveValue("font-size", 16, 12);
+	&::placeholder {
+		color: var(--filter-color);
+	}
+}
+.options {
+	@media (max-width: toEm($tablet)) {
+		display: block;
+	}
+	&__title {
+	}
+
+	&__item {
+		padding: 4px;
+	}
+
+	&__input {
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 16, 12);
+		&:after {
+			top: 9px;
+			left: 9px;
+		}
+	}
+}
+.search {
+	&__body {
+	}
+
+	&__input {
+		outline: none;
+		margin-bottom: 8px;
+		&::-webkit-search-cancel-button {
+			-webkit-appearance: none;
+			appearance: none;
+			display: none;
+		}
+	}
+
+	&__options {
+	}
+
+	&__showmore {
+	}
+
+	&__content {
+	}
+
+	&__checkbox {
+	}
+
+	&__more {
+		font-size: 12px;
+		position: relative;
+		&::before {
+			transition: transform 0.3s;
+			transform: rotate(90deg);
+			position: absolute;
+			left: 105%;
+			top: 0;
+		}
+		.--showmore-active & {
+			&::before {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}
+.body-filter {
+	display: flex;
+	flex-direction: column;
+	@media (max-width: toEm($tablet)) {
+		display: block;
+	}
+}
+.checkbox-filter {
+	display: inline-block;
+	position: relative;
+	&:not(:last-child) {
+		margin-bottom: 4px;
+	}
+
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:focus-visible + .checkbox-filter__text {
+			outline: 1px solid #000;
+		}
+		&:checked + .checkbox-filter__text:after {
+			transform: scale(1);
+		}
+		&:checked + .checkbox-filter__text::before {
+			border: 1px solid $buttonColor;
+		}
+	}
+
+	&__text {
+		cursor: pointer;
+		position: relative;
+		gap: 4px;
+		padding: 4px;
+		display: inline-flex;
+		align-items: center;
+		@include adaptiveValue("font-size", 16, 12);
+		&:before {
+			content: "";
+			border-radius: 3px;
+			align-self: flex-start;
+			flex: 0 0 20px;
+			width: 20px;
+			height: 20px;
+			border: 1px solid $bgColor2;
+		}
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			transform: scale(0);
+			width: 10px;
+			height: 10px;
+			border-radius: 3px;
+			background-color: $buttonColor;
+			position: absolute;
+			left: 9px;
+			top: 9px;
+		}
+	}
+}
+.checkbox-filter[style*="display: none"] {
+	display: none !important;
+}

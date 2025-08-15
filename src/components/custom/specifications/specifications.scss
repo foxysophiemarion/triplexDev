@@ -1,0 +1,46 @@
+.specifications {
+	&__container {
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 28, 16);
+	}
+
+	&__row {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 80, 20);
+		}
+	}
+}
+
+.row-specifications {
+	&__title {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 28, 15);
+		@include adaptiveValue("margin-bottom", 20, 10);
+	}
+
+	&__body {
+		@include adaptiveValue("gap", 40, 8);
+		grid-template-columns: repeat(5, 1fr);
+		@media (max-width: toEm($tablet)) {
+			grid-template-columns: repeat(12, 1fr);
+		}
+	}
+
+	&__item {
+	}
+
+	&__subtitle {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 16, 11);
+		@include adaptiveValue("margin-bottom", 12, 4);
+	}
+
+	&__description {
+		@include adaptiveValue("font-size", 14, 9);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 8, 6);
+		}
+	}
+}

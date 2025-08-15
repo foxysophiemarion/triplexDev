@@ -1,0 +1,22 @@
+.pages {
+	&__recommend {
+	}
+}
+.recommend {
+	&__container {
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 28, 16);
+	}
+
+	&__slider {
+		position: relative;
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+}

@@ -1,0 +1,89 @@
+.checkbox {
+	display: inline-block;
+	position: relative;
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 32, 16);
+	}
+	&.--form-error {
+		animation: shake 0.5s ease;
+		.checkbox__text {
+			color: $buttonColor;
+		}
+	}
+	@keyframes shake {
+		0%,
+		100% {
+			transform: translateX(0);
+		}
+		20%,
+		60% {
+			transform: translateX(-5px);
+		}
+		40%,
+		80% {
+			transform: translateX(5px);
+		}
+	}
+	// .checkbox__input
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:focus-visible + .checkbox__text {
+			outline: 1px solid #000;
+		}
+		&:checked + .checkbox__text:after {
+			background-color: $buttonColor;
+		}
+		&:checked + .checkbox__text::before {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	// .checkbox__text
+	&__text {
+		max-width: 420px;
+		font-size: 10px;
+		cursor: pointer;
+		position: relative;
+		gap: 5px;
+		display: flex;
+		align-items: center;
+		color: rgba(118, 119, 122, 1);
+		padding-left: 20px;
+		&:before {
+			border-radius: 3px;
+			align-self: flex-start;
+			flex: 0 0 15px;
+			width: 15px;
+			display: flex;
+			justify-content: center;
+			height: 15px;
+			z-index: 2;
+			opacity: 0;
+			color: $whiteColor;
+			top: 5px;
+			left: 0;
+			position: absolute;
+		}
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			width: 15px;
+			height: 15px;
+			border-radius: 3px;
+			border: 1px solid $buttonColor;
+			position: absolute;
+			left: 0;
+			top: 5px;
+		}
+		a {
+			@media (any-hover: hover) {
+				&:hover {
+					color: $buttonColor;
+				}
+			}
+		}
+	}
+}

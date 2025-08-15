@@ -1,0 +1,27 @@
+/*[data-fls-header-scroll] {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 148;
+}
+
+[data-fls-header-scroll-show] {
+	&.--header-scroll {
+		position: fixed;
+		z-index: 150;
+		transform: translate(0px, -200%);
+		& .header__body {
+			border-bottom: none;
+		}
+	}
+	&.--header-show {
+		transition: transform 1s;
+		position: fixed;
+		z-index: 150;
+		transform: translate(0, 0);
+		background-color: rgba(255, 255, 255, 0.6);
+		backdrop-filter: blur(10px);
+	}
+}
+*/

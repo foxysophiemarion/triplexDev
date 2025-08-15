@@ -1,0 +1,87 @@
+.delivery-page {
+	&__paymethod {
+	}
+}
+.method {
+	@include adaptiveValue("padding-bottom", 80, 40);
+	&__container {
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 28, 16);
+	}
+
+	&__subtitle {
+		margin-bottom: 16px;
+	}
+	&__text {
+		@include adaptiveValue("font-size", 16, 12);
+	}
+	&__row {
+	}
+
+	&__system {
+	}
+	&__list {
+	}
+	&__item {
+		max-width: 600px;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 20);
+		}
+	}
+}
+.item-gap {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+.row-delivery {
+	@include adaptiveValue("margin-bottom", 40, 20);
+	&__item {
+		border-radius: 8px;
+		background-color: $productColor2;
+		@include adaptiveValue("padding", 24, 16);
+		border: 1px solid rgba(227, 226, 230, 1);
+	}
+
+	&__title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		@include adaptiveValue("margin-bottom", 12, 8);
+		&::before {
+			content: "";
+
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: $buttonColor;
+		}
+	}
+
+	&__description {
+		@include adaptiveValue("font-size", 16, 12);
+	}
+}
+
+.system {
+	&__title {
+		@include adaptiveValue("margin-bottom", 20, 16);
+	}
+	&__body {
+		display: flex;
+		gap: 12px;
+		align-items: center;
+		max-width: 450px;
+	}
+	&__item {
+		border-radius: 4px;
+		background-color: $productColor2;
+		padding: 8px 16px;
+		@media (max-width: toEm($mobileSmall)) {
+			padding: 4px;
+		}
+	}
+}

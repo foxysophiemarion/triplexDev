@@ -1,0 +1,36 @@
+<section data-fls-feedback class="pages__feedback feedback-page">
+	<div class="feedback-page__container">
+		<div class="feedback-page__content">
+			<div class="feedback-page__column">
+				<h3 class="feedback-page__title title-40">Остались вопросы?</h3>
+				<p class="feedback-page__text">Свяжитесь с нами или оставьте свои данные в форме обратной связи, и мы с
+					радостью проконсультируем вас</p>
+				<form class="feedback-page__form" data-fls-form="ajax" data-fls-form-popup="popup" method="POST" action="#"
+					method="POST">
+					<div data-fls-grid class="feedback-page__body">
+						<input data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+							data-fls-input-mask="+7(999) 999-9999" required type="tel" name="form[phone]"
+							data-fls-form-errtext="Введите номер" placeholder="Телефон" class="feedback-page__input">
+						<input data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12" type="text"
+							name="form[name]" placeholder="Имя" class="feedback-page__input">
+						<button data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12" type="submit"
+							class="feedback-page__button button">Оставить
+							заявку</button>
+						<label data-fls-grid-col="8" data-fls-grid-col-tablet="12" data-fls-checkbox
+							class="feedback-page__checkbox checkbox">
+							<input required data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+								name="form[privacy-check]">
+							<span class="checkbox__text --icon-check">Нажимая кнопку, я даю согласие на обработку персональных
+								данных, а
+								также
+								подтверждаю, что ознакомлен с Политикой конфиденциальности</span>
+						</label>
+					</div>
+				</form>
+			</div>
+			<div class="feedback-page__column feedback-page__column--cover">
+				<img src="@img/feedback.png" alt="Изображение">
+			</div>
+		</div>
+	</div>
+</section>

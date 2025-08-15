@@ -1,0 +1,31 @@
+//<BUTTONS (a.btn+tab)>
+// Сниппет (HTML): btn
+.button {
+	width: max-content;
+	border: 1px solid $mainColor;
+	white-space: nowrap;
+	color: $whiteColor;
+	display: flex;
+	align-items: center;
+	background-color: $mainColor;
+	min-height: 48px;
+	padding: 0 16px;
+	border-radius: 8px;
+	transition:
+		color 0.3s,
+		background-color 0.3s;
+	@include adaptiveValue("font-size", 16, 14);
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $mainColor;
+			background-color: rgba(0, 0, 0, 0);
+		}
+	}
+	&:active {
+		border-color: rgba(118, 119, 122, 1);
+		color: $whiteColor;
+		background-color: rgba(118, 119, 122, 1);
+		transition: none;
+	}
+}

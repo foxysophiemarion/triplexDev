@@ -1,0 +1,98 @@
+<script type="module" src="@components/pages/product/product.js"></script>
+<link rel="stylesheet" href="@components/pages/product/product.scss">
+
+
+<main class="pages page--product product-page">
+	<section class="pages__gallery gallery-product">
+		<div class="gallery-product__container">
+			<div data-fls-grid class="gallery-product__body">
+				<!-- Оболочка слайдера -->
+				<div data-fls-grid-col="6" data-fls-grid-col-mobile="12" data-fls-slider
+					class="gallery-product__slider swiper">
+					<!-- Часть слайдера, которая движется -->
+					<div data-fls-gallery class="gallery-product__wrapper swiper-wrapper">
+						<a href="@img/product/01.png" class="gallery-product__slide swiper-slide --icon-fullscreen"><img
+								src="@img/product/01.png" alt="Изображение"><span
+								class="gallery-product__title">Квадрокоптер</span></a>
+						<a href="@img/product/01.png" class="gallery-product__slide swiper-slide --icon-fullscreen"><img
+								src="@img/product/01.png" alt="Изображение"><span
+								class="gallery-product__title">Квадрокоптер</span></a>
+						<a href="@img/product/01.png" class="gallery-product__slide swiper-slide --icon-fullscreen"><img
+								src="@img/product/01.png" alt="Изображение"><span
+								class="gallery-product__title">Квадрокоптер</span></a>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div data-fls-grid-col="6" data-fls-grid-col-mobile="12" class="gallery-product__column">
+					<div data-fls-breadcrumbs class="gallery-product__breadcrumbs breadcrumbs">
+						<div class="breadcrumbs__body">
+							<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Главная</a>
+							<span class="breadcrumbs__dotted"></span>
+							<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Дроны</a>
+							<span class="breadcrumbs__dotted"></span>
+							<a data-fls-button href="#"
+								class="breadcrumbs__button breadcrumbs__button--hover">Квадрокоптеры</a>
+							<span class="breadcrumbs__dotted"></span>
+							<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">DJI</a>
+							<span class="breadcrumbs__dotted"></span>
+							<span class="breadcrumbs__button breadcrumbs__button--active">DJI Mavic 3T</span>
+						</div>
+						<h2 class="breadcrumbs__title title">DJI Mavic 3T</h2>
+					</div>
+					<div data-fls-showmore class="gallery-product__showmore showmore-product">
+						<div data-fls-showmore-content class="showmore-product__content">Дрон для профессионалов,
+							готовый
+							справиться с самыми сложными задачами. Оснащенный тепловизионной и визуальной камерами, он
+							обеспечивает высокоточную съемку в любых условиях. С его помощью вы сможете оперативно решать
+							задачи мониторинга, инспекций и поисково-спасательных операций. Надежный, универсальный и простой в
+							управлении, DJI Mavic 3T станет незаменимым инструментом в вашем арсенале.
+							<br>
+							Тут еще так много будет описания, что обязательно нужен "showmore"
+						</div>
+						<button hidden data-fls-showmore-button type="button" class="showmore-product__more"><span>Показать
+								больше</span><span>Свернуть</span></button>
+					</div>
+					<div class="gallery-product__complect complect">
+						<include src="@components/custom/complect/complect.html"></include>
+					</div>
+					<div class="gallery-product__price price-product">
+						<div class="price-product__title title-40">690 000 ₽</div>
+						<div data-fls-addtocart-product data-fls-product-id="mavic-3t" data-fls-product-title="DJI Mavic 3T"
+							data-fls-product-price="690000" data-fls-product-img="@img/product/01.png"
+							class="price-product__cart">
+							<div data-fls-quantity class="price-product__quantity quantity">
+								<button data-fls-quantity-minus type="button"
+									class="quantity__button quantity__button--minus"></button>
+								<div class="quantity__input">
+									<input data-fls-addtocart-quantity data-fls-quantity-value autocomplete="off" type="text"
+										value="1">
+								</div>
+								<button data-fls-quantity-plus type="button"
+									class="quantity__button quantity__button--plus"></button>
+							</div>
+
+							<button data-fls-addtocart-button>В корзину</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="product-page__navigation navigation-product">
+		<div class="navigation-product__container">
+			<nav class="navigation-product__menu">
+				<ul class="navigation-product__list">
+					<li class="navigation-product__item"><a href="" class="navigation-product__scrollto">Аксессуары</a></li>
+					<li class="navigation-product__item"><a href="" class="navigation-product__scrollto">Основные
+							преимущества</a></li>
+					<li class="navigation-product__item"><a href="" class="navigation-product__scrollto">Характеристики</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<include src="@components/custom/accessories/accessories.html"></include>
+	<include src="@components/custom/advprod/advprod.html"></include>
+	<include src="@components/custom/specifications/specifications.html"></include>
+	<include src="@components/custom/recommend/recommend.html"></include>
+</main>

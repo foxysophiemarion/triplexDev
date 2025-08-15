@@ -1,0 +1,229 @@
+.swiper-pagination {
+	display: flex;
+	justify-content: center;
+	gap: toRem(8);
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+	padding: 20px;
+}
+.swiper-pagination-bullet {
+	cursor: pointer;
+	transition: width 0.5s;
+	display: inline-flex;
+	border-radius: toRem(24);
+	background-color: $bgColor2;
+	width: 40px;
+	padding: 2px;
+}
+.swiper-pagination-bullet-active {
+	background-color: $bgColor1;
+}
+.lg-backdrop {
+	background-color: $whiteColor;
+}
+
+.lg-next,
+.lg-prev {
+	background-color: $bgColor2;
+	color: $mainColor;
+}
+.lg-next:hover:not(.disabled),
+.lg-prev:hover:not(.disabled) {
+	background-color: $bgColor1;
+}
+.lg-toolbar .lg-icon {
+	color: $bgColor1;
+}
+.lg-toolbar .lg-icon:hover {
+	color: $mainColor;
+}
+.lg-outer.lg-components-open:not(.lg-zoomed) .lg-components {
+	display: none;
+}
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.gallery-product {
+	&__container {
+	}
+
+	&__body {
+		@include adaptiveValue("gap", 44, 16);
+	}
+
+	&__slider {
+		position: relative;
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+		background-color: $productColor2;
+		transition: background-color 0.3s;
+		position: relative;
+		border-radius: 12px;
+		overflow: hidden;
+		&::before {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			@include adaptiveValue("font-size", 24, 12);
+			border: 1px solid $bgColor2;
+			padding: 3px 5px;
+			border-radius: 4px;
+			transition:
+				transform 0.3s,
+				border-color 0.3s;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $bgColor2;
+				&::before {
+					transform: scale(1.1);
+					border-color: $buttonColor;
+				}
+			}
+		}
+	}
+
+	&__title {
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		color: $whiteColor;
+		@include adaptiveValue("padding-top", 8, 4);
+		@include adaptiveValue("padding-bottom", 8, 4);
+		@include adaptiveValue("padding-left", 12, 6);
+		@include adaptiveValue("padding-right", 12, 6);
+		border-radius: 8px;
+		background-color: $productColor1;
+		@include adaptiveValue("font-size", 16, 12);
+	}
+
+	&__column {
+	}
+
+	&__breadcrumbs {
+		margin-bottom: 8px;
+	}
+
+	&__showmore {
+	}
+}
+
+.showmore-product {
+	@include adaptiveValue("margin-top", 28, 16);
+	@include adaptiveValue("margin-bottom", 20, 16);
+	&__content {
+		@include adaptiveValue("font-size", 16, 12);
+	}
+
+	&__more {
+		@include adaptiveValue("font-size", 12, 10);
+		color: $bgColor1;
+	}
+}
+
+.price-product {
+	@include adaptiveValue("margin-top", 20, 16);
+	&__title {
+		margin-bottom: 16px;
+	}
+
+	&__cart {
+	}
+
+	&__quantity {
+	}
+}
+.quantity {
+	margin-bottom: 16px;
+	&__button {
+	}
+
+	&__button--minus {
+	}
+
+	&__input {
+	}
+
+	&__button--plus {
+	}
+}
+[data-fls-addtocart-button] {
+	max-width: 244px;
+	transition: background-color 0.3s;
+	border-radius: 8px;
+	width: 100%;
+	color: $whiteColor;
+	@include adaptiveValue("padding", 12, 8);
+	@include adaptiveValue("font-size", 20, 14);
+	background-color: $buttonColor;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: rgba(168, 29, 34, 1);
+		}
+	}
+	@media (max-width: toEm($mobile)) {
+		max-width: 180px;
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	20%,
+	60% {
+		transform: translateX(-5px);
+	}
+	40%,
+	80% {
+		transform: translateX(5px);
+	}
+}
+
+.shake-cart {
+	animation: shake 0.1s linear;
+}
+
+.navigation-product {
+	// .tabs__navigation
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		@include adaptiveValue("font-size", 16, 12);
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+	// .tabs__title
+	&__scrollto {
+		border: 1px solid $mainColor;
+		@include adaptiveValue("padding-top", 10, 4);
+		@include adaptiveValue("padding-bottom", 10, 4);
+		@include adaptiveValue("padding-right", 12, 5);
+		@include adaptiveValue("padding-left", 12, 5);
+		border-radius: 5px;
+		transition:
+			color 0.3s,
+			background-color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $mainColor;
+			}
+		}
+		&.--tab-active {
+			color: $whiteColor;
+			background-color: $mainColor;
+		}
+	}
+}

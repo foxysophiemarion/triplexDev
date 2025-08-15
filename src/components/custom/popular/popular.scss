@@ -1,0 +1,51 @@
+.popular {
+	&__title {
+		margin-bottom: 20px;
+	}
+}
+
+.popular-tabs {
+	// .tabs__navigation
+	&__navigation {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		@include adaptiveValue("font-size", 16, 12);
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+	// .tabs__title
+	&__title {
+		border: 1px solid $mainColor;
+		@include adaptiveValue("padding-top", 10, 4);
+		@include adaptiveValue("padding-bottom", 10, 4);
+		@include adaptiveValue("padding-right", 12, 5);
+		@include adaptiveValue("padding-left", 12, 5);
+		border-radius: 5px;
+		transition:
+			color 0.3s,
+			background-color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $mainColor;
+			}
+		}
+		&.--tab-active {
+			color: $whiteColor;
+			background-color: $mainColor;
+		}
+	}
+	// .tabs__content
+	&__content {
+	}
+	// .tabs__body
+	&__body {
+	}
+}
+.tabs__wrapper {
+	@media (max-width: toEm($mobileSmall)) {
+		display: flex;
+	}
+}
+.tabs-grid {
+}

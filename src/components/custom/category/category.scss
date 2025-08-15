@@ -1,0 +1,43 @@
+.category {
+	&__container {
+	}
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	&__body {
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+	}
+}
+.item-category {
+	@media (any-hover: hover) {
+		&:hover {
+			.item-category__wrapper {
+				background-color: $bgColor2;
+			}
+		}
+	}
+	&__wrapper {
+		transition: background-color 0.3s;
+		display: flex;
+		align-items: center;
+		max-width: 250px;
+		aspect-ratio: 1;
+		padding: 8px;
+		background-color: $productColor2;
+		@include adaptiveValue("margin-bottom", 12, 6);
+	}
+	&__title {
+		text-align: center;
+		font-size: toRem(20);
+		@include adaptiveValue("font-size", 20, 12, 1, 1920, 991.98);
+		@include adaptiveValue("font-size", 18, 12, 1, 991.98, 767.98);
+		@include adaptiveValue("font-size", 16, 12, 1, 767.98, 479.98);
+		@include adaptiveValue("font-size", 14, 12, 1, 479.98, 320);
+	}
+}

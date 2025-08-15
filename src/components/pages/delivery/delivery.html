@@ -1,0 +1,161 @@
+<script type="module" src="@components/pages/delivery/delivery.js"></script>
+<link rel="stylesheet" href="@components/pages/delivery/delivery.scss">
+
+
+<main class="pages page--delivery delivery-page">
+	<div data-fls-breadcrumbs class="pages__breadcrumbs breadcrumbs breadcrumbs-pages">
+		<div class="breadcrumbs__container">
+			<div class="breadcrumbs__body">
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Главная</a>
+				<span class="breadcrumbs__dotted"></span>
+				<span class="breadcrumbs__button breadcrumbs__button--active">Доставка и оплата</span>
+			</div>
+			<h2 class="breadcrumbs__title title">Доставка и оплата</h2>
+		</div>
+	</div>
+	<section class="delivery-page__paymethod method">
+		<div class="method__container">
+			<h3 class="method__title title-40">Способы оплаты</h3>
+			<div data-fls-grid class="method__row row-delivery">
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-mobile="12"
+					class="row-delivery__item">
+					<h5 class="row-delivery__title subtitle">По расчетному счёту</h5>
+					<p class="row-delivery__description">Вы можете производить оплату за купленные товары по реквизитам
+						собственного юридического лица (оплата через расчетный счёт). От юридических лиц возможна оплата с
+						НДС</p>
+				</div>
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-mobile="12"
+					class="row-delivery__item">
+					<h5 class="row-delivery__title subtitle">Наличный расчёт</h5>
+					<p class="row-delivery__description">Если товар доставляется курьером, то оплата осуществляется наличными
+						курьеру в руки. При получении товара обязательно проверьте комплектацию товара, наличие гарантийного
+						талона и чека</p>
+				</div>
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-mobile="12"
+					class="row-delivery__item">
+					<h5 class="row-delivery__title subtitle">Банковской картой</h5>
+					<p class="row-delivery__description">Для выбора оплаты товара с помощью банковской карты на
+						соответствующей странице необходимо нажать кнопку Оплата заказа банковской картой. Оплата происходит
+						через ПАО Сбербанк</p>
+				</div>
+			</div>
+			<div class="method__system system">
+				<h6 class="system__title subtitle">Доступные платежные системы</h6>
+				<div class="system__body">
+					<div class="system__item"><img src="@img/delivery/01.png" alt="Изображение"></div>
+					<div class="system__item"><img src="@img/delivery/02.png" alt="Изображение"></div>
+					<div class="system__item"><img src="@img/delivery/03.png" alt="Изображение"></div>
+					<div class="system__item"><img src="@img/delivery/04.png" alt="Изображение"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="delivery-page__paymethod method">
+		<div class="method__container">
+			<h3 class="method__title title-40">Доставка</h3>
+			<h4 class="method__subtitle subtitle">Способы получения заказа</h4>
+			<div data-fls-grid class="method__row row-delivery">
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-mobile="12"
+					class="row-delivery__item">
+					<h5 class="row-delivery__title subtitle">Самовывоз из магазина</h5>
+					<p class="row-delivery__description">Вы можете забрать товар в нашем магазине. Список торговых точек,
+						которые принимают заказы от нашей компании появится у Вас в корзине</p>
+				</div>
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-mobile="12"
+					class="row-delivery__item">
+					<h5 class="row-delivery__title subtitle">Курьерская доставка</h5>
+					<p class="row-delivery__description">Мы доставим Ваш товар в любую точку в удобное для Вас время.
+						Доставка осуществляется семь дней в неделю</p>
+				</div>
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-mobile="12"
+					class="row-delivery__item">
+					<h5 class="row-delivery__title subtitle">Доставка транспортной компанией</h5>
+					<p class="row-delivery__description">Вы можете заказать доставку через СДЭК или другим удобным для вас
+						сервисом (доставка возможно только после полной предоплаты заказанного вами товара)</p>
+				</div>
+			</div>
+			<div class="method__item">
+				<h4 class="method__subtitle subtitle subtitle">Стоимость доставки</h4>
+				<ul class="method__list list-pages">
+					<li class="list-pages__item">Бесплатная доставка по Москве при заказе от 10.000 рублей, менее 10.000
+						рублей
+						— 600 рублей</li>
+					<li class="list-pages__item">Бесплатная доставка по Московской области при заказе от 15.000 рублей, менее
+						15.000 рублей — 600 рублей + 50 ₽ / км от МКАД</li>
+					<li class="list-pages__item">Перемещение между магазинами — бесплатно;</li>
+					<li class="list-pages__item">В день заказа по Москве в пределах МКАД — 1.000 рублей</li>
+					<li class="list-pages__item">По регионам России транспортными: компаниями СДЭК, Деловые Линии, DHL,
+						Достависта, ТК Виктория, почта России и другие, в каждый регион рассчитывается отдельно</li>
+				</ul>
+			</div>
+			<div class="method__item">
+				<h4 class="method__subtitle subtitle subtitle">Сроки доставки</h4>
+				<ul class="method__list list-pages">
+					<li class="list-pages__item">Доставка по МСК и МО — в течение 3 рабочих дней</li>
+					<li class="list-pages__item">Доставка по МСК и МО — в течение 3 рабочих дней</li>
+					<li class="list-pages__item">Доставка по МСК и МО — в течение 3 рабочих дней</li>
+					<li class="list-pages__item">Доставка по МСК и МО — в течение 3 рабочих дней</li>
+					<li class="list-pages__item">По регионам России — в течение 10 работчих дней, в зависимости от
+						удаленности
+						региона </li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="delivery-page__paymethod method">
+		<div class="method__container">
+			<h3 class="method__title title-40">Гарантия и возврат</h3>
+			<h4 class="method__subtitle subtitle">Гарантия</h4>
+			<div class="method__item item-gap">
+				<p class="method__text">Мы предоставляем гарантию на все дроны и комплектующие, приобретённые в нашем
+					магазине:</p>
+				<ul class="method__list list-pages">
+					<li class="list-pages__item">На дроны: от 6 до 12 месяцев в зависимости от модели</li>
+					<li class="list-pages__item">На комплектующие и запчасти - 6 месяцев, если иное не указано в документации
+						производителя</li>
+				</ul>
+				<p class="method__text">Гарантия распространяется на заводские дефекты, повлекшие за собой неисправность
+					устройства при соблюдении условий эксплуатации, указанных в инструкции. Гарантия не распространяется на
+					случаи:</p>
+				<ul class="method__list list-pages">
+					<li class="list-pages__item">Механические повреждения, вызванные падениями, столкновениями и прочими
+						внешними воздействиями</li>
+					<li class="list-pages__item">Повреждения вследствие неправильной сборки или использования</li>
+					<li class="list-pages__item">Попадание влаги при отсутствии влагозащиты</li>
+					<li class="list-pages__item">Использование неоригинальных комплектующих</li>
+					<li class="list-pages__item">Независимые попытки ремонта</li>
+					<li class="list-pages__item">Иные случаи нецелевого использования товара</li>
+				</ul>
+				<p class="method__text">Гарантия распространяется на заводские дефекты, повлекшие за собой неисправность
+					устройства при соблюдении условий эксплуатации, указанных в инструкции. Гарантия не распространяется на
+					случаи:</p>
+			</div>
+			<h4 class="method__subtitle subtitle">Возврат товара</h4>
+			<div class="method__item item-gap">
+				<p class="method__text">Вы можете вернуть или обменять товар надлежащего качества в течение 7 дней после
+					получения, если:</p>
+				<ul class="method__list list-pages">
+					<li class="list-pages__item">Он не использовался</li>
+					<li class="list-pages__item">Сохранены товарный вид, упаковка, пломбы и документы</li>
+					<li class="list-pages__item">Товар не входит в перечень невозвратных (например, кабели, батареи и
+						элементы питания в распечатанном виде)</li>
+				</ul>
+				<p class="method__text">Если товар оказался с дефектом, вы имеете право:</p>
+				<ul class="method__list list-pages">
+					<li class="list-pages__item">Механические повреждения, вызванные падениями, столкновениями и прочими
+						внешними воздействиями</li>
+					<li class="list-pages__item">Заменить его на аналогичный</li>
+					<li class="list-pages__item">Потребовать ремонт или устранение недостатков</li>
+					<li class="list-pages__item">Получить возврат денежных средств</li>
+				</ul>
+				<p class="method__text">Возврат средств осуществляется в течение 10 рабочих дней после получения товара на
+					склад и подтверждения причин возврата
+				</p>
+				<p class="method__text">Для оформления возврата свяжитесь с нами по контактной форме или через e-mail. Мы
+					вышлем инструкцию и
+					адрес для возврата</p>
+			</div>
+		</div>
+	</section>
+	<include src="@components/custom/feedback/feedback.html"></include>
+</main>

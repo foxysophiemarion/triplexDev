@@ -1,0 +1,59 @@
+<script type="module" src="@components/pages/cooperation/cooperation.js"></script>
+<link rel="stylesheet" href="@components/pages/cooperation/cooperation.scss">
+
+
+<main class="pages page--cooperation cooperation-page">
+	<div data-fls-breadcrumbs class="pages__breadcrumbs breadcrumbs breadcrumbs-pages">
+		<div class="breadcrumbs__container">
+			<div class="breadcrumbs__body">
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Главная</a>
+				<span class="breadcrumbs__dotted"></span>
+				<span class="breadcrumbs__button breadcrumbs__button--active">Сотрудничество</span>
+			</div>
+			<h2 class="breadcrumbs__title title">Сотрудничество</h2>
+		</div>
+	</div>
+	<div class="pages__cover cover-cooperation">
+		<div class="cover-cooperation__container">
+			<img class="cover-cooperation__image ibg" src="@img/cooperation/cover.png" alt="Изображение">
+		</div>
+	</div>
+	<section class="pages__variants variants">
+		<div class="variants__container">
+			<h3 class="variants__title title-40">Предлагаем различные варианты сотрудничества</h3>
+			<p class="variants__description description">Не нашли подходящий для себя вариант? Вы всегда можете связаться
+				с нами и предложить специальные условия. Мы рады любой форме взаимовыгодного сотрудничества</p>
+			<div data-fls-grid class="variants__content">
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="variants__item item-variant">
+					<div class="item-variant__image"><img src="@img/cooperation/variant01.png" alt="Изображение"></div>
+					<div class="item-variant__body">
+						<h6 class="item-variant__title">Оптовики</h6>
+						<p class="item-variant__text">Осуществляем поставки дронов и комплектующих в крупных объемах для
+							промышленных и корпоративных клиентов по сниженной цене. Гарантируем стабильность, документацию и
+							логистику под ваши задачи</p>
+					</div>
+				</div>
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="6" data-fls-grid-col-small="12"
+					class="variants__item item-variant">
+					<div class="item-variant__image"><img src="@img/cooperation/variant02.png" alt="Изображение"></div>
+					<div class="item-variant__body">
+						<h6 class="item-variant__title">Производители</h6>
+						<p class="item-variant__text">Закупаем комплектующие напрямую у производителей. Рассматриваем
+							долгосрочное сотрудничество с предприятиями, выпускающими узлы и модули для дронов различных
+							конфигураций</p>
+					</div>
+				</div>
+				<div data-fls-grid-col="4" data-fls-grid-col-tablet="12" class="variants__item item-variant">
+					<div class="item-variant__image"><img src="@img/cooperation/variant03.png" alt="Изображение"></div>
+					<div class="item-variant__body">
+						<h6 class="item-variant__title">Выступим посредником</h6>
+						<p class="item-variant__text">Поможем найти нужный товар на сторонних платформах и организуем его
+							быструю и безопасную доставку. Берем на себя все вопросы логистики и оформления</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<include src="@components/custom/feedback/feedback.html"></include>
+</main>

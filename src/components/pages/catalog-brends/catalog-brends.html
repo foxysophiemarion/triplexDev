@@ -1,0 +1,20 @@
+<script type="module" src="@components/pages/catalog-brends/catalog-brends.js"></script>
+<link rel="stylesheet" href="@components/pages/catalog-brends/catalog-brends.scss">
+
+
+<main class="pages page--catalog catalog">
+	<div data-fls-breadcrumbs class="pages__breadcrumbs breadcrumbs">
+		<div class="breadcrumbs__container">
+			<div class="breadcrumbs__body">
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Главная</a>
+				<span class="breadcrumbs__dotted"></span>
+				<a data-fls-button href="#" class="breadcrumbs__button breadcrumbs__button--hover">Дроны</a>
+				<span class="breadcrumbs__dotted"></span>
+				<span class="breadcrumbs__button breadcrumbs__button--active">Дроны DJI</span>
+			</div>
+			<h2 class="breadcrumbs__title title">Дроны DJI</h2>
+		</div>
+	</div>
+	<include src="@components/custom/category/category.html"></include>
+	<include src="@components/custom/filter/filter.html"></include>
+</main>

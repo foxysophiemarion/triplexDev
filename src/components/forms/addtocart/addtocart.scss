@@ -1,0 +1,11 @@
+/* Не скрываем по умолчанию — скрипт добавляет/убирает класс */
+[data-fls-quantity]._hidden {
+	display: none;
+}
+
+/* когда активен, используем гибкий контейнер (подбери под свою вёрстку) */
+[data-fls-quantity]._active {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}

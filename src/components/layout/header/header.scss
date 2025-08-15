@@ -1,0 +1,394 @@
+.header {
+	&.--header-scroll {
+		.fixbutton {
+			position: fixed;
+			visibility: visible;
+			opacity: 1;
+
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: $mainColor;
+				}
+			}
+		}
+	}
+	&__top {
+		position: relative;
+		color: $whiteColor;
+
+		background: var(--gradient-header);
+	}
+
+	&__fixbutton {
+		opacity: 0;
+		visibility: hidden;
+		background-color: $buttonColor;
+		transition:
+			opacity 0.3s,
+			visibility 0.3s,
+			background-color 0.3s;
+		border-radius: 50%;
+		width: 50px;
+		aspect-ratio: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		right: 2%;
+		top: 90%;
+		z-index: 10;
+		&::before {
+			font-size: 32px;
+			color: $whiteColor;
+			transform: rotate(-90deg);
+		}
+	}
+
+	&__container {
+	}
+
+	&__logo {
+		flex: 0 0 30%;
+		img {
+			width: 100%;
+			max-width: 205px;
+		}
+	}
+
+	&__feedback {
+		&.--dynamic {
+			a {
+				justify-content: center;
+			}
+		}
+		@media (max-width: toEm($tablet)) {
+			grid-row-start: 2;
+		}
+		@media (max-width: toEm($mobile)) {
+			display: none;
+		}
+	}
+
+	&__button {
+	}
+
+	&__bottom {
+	}
+
+	&__menu {
+	}
+}
+.top-header {
+	&__body {
+		display: flex;
+		gap: toRem(40);
+		@include adaptiveValue("gap", 40, 8, 1, 1920, 991.98);
+		@include adaptiveValue("gap", 8, 8, 1, 991.98, 0);
+		@media (max-width: toEm($tablet)) {
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		@media (max-width: toEm($tablet)) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@media (max-width: toEm($mobile)) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__spollers {
+		@media (max-width: toEm($tablet)) {
+			grid-row-start: 2;
+			grid-column-start: 2;
+		}
+		@media (max-width: toEm($mobile)) {
+			grid-column-start: auto;
+		}
+	}
+
+	&__search {
+		@include adaptiveValue("font-size", 16, 14);
+		@media (max-width: toEm($tablet)) {
+			grid-column-start: 3;
+			grid-column-end: 5;
+		}
+		@media (max-width: toEm($mobile)) {
+			grid-row-start: 2;
+			grid-column-end: 4;
+			grid-column-start: 2;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			grid-row-start: 3;
+			grid-column: span 2;
+		}
+	}
+
+	&__right {
+		flex: 0 1 18%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue("gap", 20, 16);
+		white-space: nowrap;
+		@media (max-width: toEm($tablet)) {
+			display: none;
+		}
+	}
+
+	&__profile {
+		padding: 16px 0;
+	}
+
+	&__cart {
+	}
+	&__end {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 16px;
+		grid-row-start: 2;
+		grid-column-start: 4;
+		@media (min-width: toEm($tablet)) {
+			display: none;
+		}
+		@media (max-width: toEm($mobile)) {
+			grid-column-start: 3;
+			grid-row-start: 1;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			grid-column-start: 2;
+		}
+	}
+}
+.spollers {
+	&__item {
+	}
+
+	&__title {
+	}
+
+	&__body {
+	}
+}
+.search-header {
+	flex: 1 1 auto;
+	&__body {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		min-height: 48px;
+		padding: toRem(12) toRem(16);
+		border-radius: 5px;
+		background-color: rgba(118, 119, 122, 1);
+	}
+
+	&__input {
+		outline: none;
+		&::placeholder {
+			transition: color 0.3s;
+			color: rgba(227, 226, 230, 1);
+		}
+		&:focus::placeholder {
+			color: $whiteColor;
+		}
+		&::-webkit-search-cancel-button {
+			-webkit-appearance: none;
+			appearance: none;
+			display: none;
+		}
+	}
+
+	&__reset {
+		transition:
+			transform 0.3s,
+			color 0.3s;
+		transform: scale(0);
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $buttonColor;
+			}
+		}
+	}
+	&__input:not(:placeholder-shown) + &__reset {
+		transform: scale(1);
+	}
+	&__button {
+		transition: color 0.3s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $buttonColor;
+			}
+		}
+	}
+}
+
+.profile-icon {
+	position: relative;
+	&--enter {
+		&:hover {
+			.profile-icon__body {
+				transform: scaleY(1);
+				/* По логике должен работать только, когда пользователь вошел в аккаунт */
+			}
+		}
+	}
+	&:hover {
+		.profile-icon__button {
+			color: $buttonColor;
+		}
+	}
+
+	&__button {
+		font-size: 27px;
+		display: flex;
+		align-items: center;
+		transition: color 0.3s;
+	}
+
+	&__body {
+		padding: 12px;
+		position: absolute;
+		top: 100%;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		color: $mainColor;
+		border-radius: 8px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		background-color: $whiteColor;
+		@include adaptiveValue("font-size", 14, 12);
+		transform: scaleY(0);
+		transition: transform 0.3s;
+	}
+
+	&__link {
+		transition: color 0.3s;
+		&:hover {
+			color: $buttonColor;
+		}
+	}
+}
+
+.cart-icon {
+	&__button {
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: 27px;
+		transition: color 0.3s;
+		&::before {
+			transition: color 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					color: $buttonColor;
+				}
+			}
+		}
+	}
+	&__quantity {
+		position: absolute;
+		top: 0;
+		right: -5px;
+		font-size: 8px;
+		width: 16px;
+		height: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background-color: $buttonColor;
+	}
+}
+
+.bottom-header {
+	background-color: $bgColor2;
+	padding: 12px 0;
+	&__container {
+		display: flex;
+		align-items: center;
+		column-gap: 40px;
+		row-gap: 16px;
+		justify-content: flex-end;
+		@media (max-width: toEm(1100)) {
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+
+	&__menu {
+		@media (max-width: toEm($mobile)) {
+			justify-self: flex-end;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+
+		align-items: center;
+		@include adaptiveValue("gap", 28, 16);
+		@include adaptiveValue("font-size", 14, 12);
+	}
+
+	&__link {
+		transition: color 0.3s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $buttonColor;
+			}
+		}
+	}
+}
+.menu {
+	font-size: 14px;
+	&__icon {
+	}
+
+	&__body {
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 28px;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $buttonColor;
+				&::before {
+					color: $mainColor;
+				}
+			}
+		}
+
+		&::before {
+			transition: color 0.3s;
+			font-size: 21px;
+			color: $buttonColor;
+		}
+	}
+}

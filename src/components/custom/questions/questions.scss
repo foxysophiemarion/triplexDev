@@ -1,0 +1,103 @@
+.questions {
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		@include adaptiveValue("gap", 40, 20);
+		@media (max-width: toEm($pc)) {
+			align-items: center;
+		}
+		@media (max-width: toEm($tablet)) {
+			flex-direction: column;
+			align-items: stretch;
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+	}
+}
+.column-questions {
+	&__title {
+	}
+
+	&__spollers {
+	}
+
+	&__cover {
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	&__image {
+	}
+}
+
+.spollers-questions {
+	&__item {
+	}
+	&__title {
+		width: 100%;
+		cursor: default;
+		text-align: left;
+		@include adaptiveValue("padding-top", 20, 10);
+		@include adaptiveValue("padding-bottom", 20, 10);
+		@include adaptiveValue("padding-right", 60, 50);
+		transition: color 0.5s ease 0s;
+		position: relative;
+		list-style: none;
+		border-bottom: 1px solid rgba(61, 62, 67, 1);
+		@include adaptiveValue("font-size", 28, 16, 1, 1920, 991.98);
+		@include adaptiveValue("font-size", 20, 14, 1, 991.98, 320);
+		@media (max-width: toEm($mobileSmall)) {
+			br {
+				display: none;
+			}
+		}
+		&::marker,
+		&::-webkit-details-marker {
+			display: none;
+		}
+		.--spoller-init & {
+			cursor: pointer;
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				background-color: $mainColor;
+				height: 2px;
+				width: 28px;
+				transition:
+					transform 0.5s ease 0s,
+					background-color 0.5s ease 0s;
+				@media (max-width: toEm($mobile)) {
+					width: 16px;
+				}
+			}
+			&::before {
+			}
+			&::after {
+				transform: rotate(-90deg);
+			}
+			&.--spoller-active {
+				color: rgba(118, 119, 122, 1);
+				&::before,
+				&::after {
+					background-color: $buttonColor;
+				}
+				&::after {
+					transform: rotate(0);
+				}
+			}
+		}
+	}
+	&__body {
+		max-width: 590px;
+		@include adaptiveValue("padding-top", 20, 10);
+		@include adaptiveValue("padding-bottom", 20, 10);
+		@include adaptiveValue("font-size", 16, 12);
+	}
+}

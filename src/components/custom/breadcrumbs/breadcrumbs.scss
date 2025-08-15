@@ -1,0 +1,38 @@
+.breadcrumbs {
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		@include adaptiveValue("font-size", 16, 12);
+	}
+
+	&__button {
+		padding: 4px;
+		transition: color 0.3s;
+		color: rgba(118, 119, 122, 1);
+		&--hover {
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainColor;
+				}
+			}
+		}
+		&--active {
+		}
+	}
+
+	&__dotted {
+		margin: 0 4px;
+		display: block;
+		width: 3px;
+		height: 3px;
+		border-radius: 50%;
+		background-color: rgba(118, 119, 122, 1);
+	}
+
+	&__title {
+	}
+}

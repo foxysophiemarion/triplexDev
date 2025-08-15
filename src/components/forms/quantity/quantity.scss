@@ -1,0 +1,61 @@
+//<QUANTITY>
+// Сниппет (HTML): qa
+.quantity {
+	display: flex;
+	@include adaptiveValue("padding", 12, 8);
+	border: 1px solid $buttonColor;
+	max-width: 244px;
+	width: 100%;
+	border-radius: 8px;
+	@media (max-width: toEm($mobile)) {
+		max-width: 180px;
+	}
+	// .quantity__button
+	&__button {
+		flex: 0 0 30px;
+		padding: toRem(5);
+		position: relative;
+		cursor: pointer;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transition: all 0.3s ease 0s;
+			margin: 0px 0px 0px -4.5px;
+			background-color: $mainColor;
+			@include adaptiveValue("width", 20, 14);
+			height: 2px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before,
+				&::after {
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+		// .quantity__button_plus
+		&--plus {
+			&::before {
+				transform: rotate(-90deg);
+			}
+		}
+		// .quantity__button_minus
+		&--minus {
+		}
+	}
+	// .quantity__input
+	&__input {
+		flex: 1 1 auto;
+		input {
+			outline: none;
+			height: 100%;
+			color: $mainColor;
+			@include adaptiveValue("font-size", 20, 14);
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
