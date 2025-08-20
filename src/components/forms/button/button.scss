@@ -15,7 +15,6 @@
 		color 0.3s,
 		background-color 0.3s;
 	@include adaptiveValue("font-size", 16, 14);
-
 	@media (any-hover: hover) {
 		&:hover {
 			color: $mainColor;
@@ -24,8 +23,8 @@
 	}
 	&:active {
 		border-color: rgba(118, 119, 122, 1);
-		color: $whiteColor;
-		background-color: rgba(118, 119, 122, 1);
+		color: $whiteColor !important;
+		background-color: rgba(118, 119, 122, 1) !important;
 		transition: none;
 	}
 }

@@ -23,20 +23,17 @@
 				return;
 			}
 
-			// Сохраняем выбранные товары отдельно, если нужно
 			localStorage.setItem('checkout_items', JSON.stringify(selectedItems));
 
-			// Сохраняем промокод
 			if (appliedPromo) {
 				localStorage.setItem('checkout_promo', appliedPromo);
 			}
 
-			// Переход на страницу оформления
 			window.location.href = '/pay-page.html';
 		});
 	}
 
-	let appliedPromo = null; // пример: 'SALE10'
+	let appliedPromo = null;
 
 	function getCart() {
 		try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
@@ -61,6 +58,18 @@
 
 	function formatRub(num) {
 		return (num || 0).toLocaleString('ru-RU') + ' ₽';
+	}
+
+	function updateItem(index) {
+		const cart = getCart();
+		const item = cart[index];
+		const row = itemsRoot.querySelector(`.cart-item [data-index="${index}"]`).closest('.cart-item');
+		if (row) {
+			row.querySelector('[data-fls-quantity-value]').value = item.qty;
+			row.querySelector('.cart-item__sum').textContent = formatRub(item.qty * item.price);
+		}
+		updateTotal();
+		updateHeaderCounter();
 	}
 
 	function render() {
@@ -128,20 +137,22 @@
 			const i = +e.target.dataset.index;
 			cart[i].qty++;
 			setCart(cart);
-			render();
+			updateItem(i);
 		}
 
 		if (e.target.classList.contains('quantity__button--minus')) {
 			const i = +e.target.dataset.index;
 			if (cart[i].qty > 1) {
 				cart[i].qty--;
+				setCart(cart);
+				updateItem(i);
 			} else {
 				cart.splice(i, 1);
 				selected.splice(i, 1);
+				setCart(cart);
+				setSelected(selected);
+				render();
 			}
-			setCart(cart);
-			setSelected(selected);
-			render();
 		}
 
 		if (e.target.classList.contains('cart-item__remove')) {
@@ -162,7 +173,6 @@
 		}
 	});
 
-	// Обработка изменений: чекбоксы и ручной ввод количества
 	itemsRoot.addEventListener('change', (e) => {
 		if (e.target.classList.contains('checkbox__input')) {
 			const index = +e.target.dataset.index;
@@ -179,11 +189,10 @@
 			if (isNaN(val) || val < 1) val = 1;
 			cart[index].qty = val;
 			setCart(cart);
-			render();
+			updateItem(index);
 		}
 	});
 
-	// Промокод
 	if (promoBtn) {
 		promoBtn.addEventListener('click', () => {
 			const code = (promoInput?.value || '').trim().toUpperCase();
@@ -196,7 +205,6 @@
 		const cart = getCart();
 		let selected = getSelected();
 
-		// Синхронизация: если selected меньше, дополняем true
 		if (selected.length < cart.length) {
 			selected = cart.map((_, i) => selected[i] !== false);
 			setSelected(selected);

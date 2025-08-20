@@ -47,8 +47,10 @@
 		@include adaptiveValue("font-size", 16, 12);
 		@media (any-hover: hover) {
 			&:hover {
-				color: $mainColor;
-				background-color: $productColor2;
+				&:not(.--tab-active) {
+					color: $mainColor;
+					background-color: $productColor2;
+				}
 			}
 		}
 		&.--tab-active {
