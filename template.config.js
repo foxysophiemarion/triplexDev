@@ -97,11 +97,11 @@ export default {
 		enable: false,
 	},
 	ftp: {
-		host: 'vh452.timeweb.ru',
+		host: '',
 		port: 21,
 		remoteDir: `/public_html/`, //${projectName}
-		user: 'triplexae',
-		password: 'WVMrfp$8ML2Y',
+		user: '',
+		password: '',
 	},
 	logger: {
 		// Логи работы сборки в терминале
