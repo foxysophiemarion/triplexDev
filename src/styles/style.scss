@@ -290,7 +290,9 @@ body:has(.spollers__title--header.--spoller-active) main::before {
 .product-card {
 	display: flex;
 	flex-direction: column;
-
+	&.hidden {
+		display: none;
+	}
 	&:hover .product-card__cover {
 		background-color: $bgColor2;
 	}

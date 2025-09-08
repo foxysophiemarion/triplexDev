@@ -15,52 +15,52 @@
 							</div>
 						</details>
 					</div>
-					<form class="top-header__search search-header" action="#" method="GET">
+					<form class="top-header__search search-header" action="#" method="GET" data-fls-search>
 						<div class="search-header__body">
-							<input type="search" name="[search]" placeholder="Найти товар" class="search-header__input">
-							<button data-fls-button type="reset"
-								class="search-header__reset --icon-reset"><span></span></button>
+							<input type="search" name="search" placeholder="Найти товар" class="search-header__input"
+								oninput="filterSearchResults(this.value)">
+							<button data-fls-button data-fls-reset type="reset" class="search-header__reset --icon-reset"
+								onclick="resetSearch()" style="display: none;"><span></span></button>
 							<button type="submit" class="search-header__button --icon-search"></button>
 						</div>
-						<!-- content должен отображаться только при вводе значений в строку поиска -->
-						<div class="search-header__content">
-							<a href="" class="search-header__item item-search">
+						<div class="search-header__content" id="searchContent" style="display: none;">
+							<a href="" class="search-header__item item-search" data-keywords="квадрокоптеры dji дрон">
 								<div class="item-search__image"><img src="@img/search/01.png" alt="Изображение"></div>
 								<div class="item-search__text">
 									<h6 class="item-search__title">Квадрокоптеры DJI</h6>
 									<p class="item-search__desc">Категория</p>
 								</div>
 							</a>
-							<a href="" class="search-header__item item-search">
+							<a href="" class="search-header__item item-search" data-keywords="оборудование dji дрон">
 								<div class="item-search__image"><img src="@img/search/02.png" alt="Изображение"></div>
 								<div class="item-search__text">
 									<h6 class="item-search__title">Оборудование для дронов DJI</h6>
 									<p class="item-search__desc">Категория</p>
 								</div>
 							</a>
-							<a href="" class="search-header__item item-search">
+							<a href="" class="search-header__item item-search" data-keywords="dji бренд">
 								<div class="item-search__image"><img src="@img/logos/01.svg" alt="Изображение"></div>
 								<div class="item-search__text">
 									<h6 class="item-search__title">DJI</h6>
 									<p class="item-search__desc">Бренд</p>
 								</div>
 							</a>
-							<a href="" class="search-header__item item-search">
+							<a href="" class="search-header__item item-search" data-keywords="dji crystalsky монитор">
 								<div class="item-search__image"><img src="@img/search/02.png" alt="Изображение"></div>
 								<div class="item-search__text">
 									<h6 class="item-search__title">DJI Монитор CrystalSky</h6>
-									<p class="item-search__desc"> 115 800 ₽</p>
+									<p class="item-search__desc">115 800 ₽</p>
 								</div>
 							</a>
-							<a href="" class="search-header__item item-search">
-								<div class="item-search__image"><img src="@img/search/03.png" alt="Изображение">
-								</div>
+							<a href="" class="search-header__item item-search"
+								data-keywords="квадрокоптер dji matrice 350 rtk combo">
+								<div class="item-search__image"><img src="@img/search/03.png" alt="Изображение"></div>
 								<div class="item-search__text">
 									<h6 class="item-search__title">Квадрокоптер DJI Matrice 350 RTK Combo</h6>
 									<p class="item-search__desc">2 538 400 ₽</p>
 								</div>
 							</a>
-							<a href="" class="search-header__item item-search">
+							<a href="" class="search-header__item item-search" data-keywords="товар">
 								<div class="item-search__image"><img src="@img/search/04.png" alt="Изображение"></div>
 								<div class="item-search__text">
 									<h6 class="item-search__title">Товар</h6>
@@ -74,8 +74,7 @@
 				<div class="top-header__right">
 					<div data-fls-dynamic=".top-header__left,991.98" class="header__feedback">
 						<a data-fls-button data-fls-dynamic=".menu__body,767.98" href="#"
-							class="header__button button">Связаться с
-							нами</a>
+							class="header__button button">Связаться с нами</a>
 					</div>
 					<div data-fls-dynamic=".top-header__end,991.98" class="top-header__profile profile-icon">
 						<a data-fls-popup-link="signin" data-fls-button href="#"
@@ -116,3 +115,36 @@
 		</div>
 	</div>
 </header>
+<script>
+	function filterSearchResults(query) {
+		const content = document.querySelector('[data-fls-search] #searchContent');
+		const resetButton = document.querySelector('[data-fls-search] [data-fls-reset]');
+		if (!content) return;
+		const items = content.querySelectorAll('.item-search');
+		query = query.trim().toLowerCase();
+
+		if (query === '') {
+			content.style.display = 'none';
+			resetButton.style.display = 'none';
+			items.forEach(item => item.style.display = 'block');
+			return;
+		}
+
+		content.style.display = 'flex';
+		resetButton.style.display = 'flex';
+		items.forEach(item => {
+			const keywords = item.getAttribute('data-keywords').toLowerCase();
+			item.style.display = keywords.includes(query) ? 'flex' : 'none';
+		});
+	}
+
+	function resetSearch() {
+		const input = document.querySelector('[data-fls-search] .search-header__input');
+		const content = document.querySelector('[data-fls-search] #searchContent');
+		const resetButton = document.querySelector('[data-fls-search] [data-fls-reset]');
+		input.value = '';
+		content.style.display = 'none';
+		resetButton.style.display = 'none';
+		content.querySelectorAll('.item-search').forEach(item => item.style.display = 'block');
+	}
+</script>

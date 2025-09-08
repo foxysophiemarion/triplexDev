@@ -1,6 +1,5 @@
 // FLS (Full Logging System)
 export function FLS(text, vars = '') {
-	console.log('flsLogging:', flsLogging, 'flsLang:', flsLang, 'text:', text);
 	if (flsLogging) {
 		if (flsLang[text]) {
 			if (Array.isArray(vars)) {
@@ -275,3 +274,5 @@ export function formatDate(date, sepp) {
 	const year = d.getFullYear();
 	return `${day}${sepp}${month}${sepp}${year}`;
 }
+
+
