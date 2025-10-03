@@ -15,8 +15,8 @@
 						<div class="popup-item__column">
 							<input required type="email" name="form-sign[mail]" placeholder="Электронная почта"
 								class="popup-item__input">
-							<input required type="password" name="form-sign[password]" placeholder="Пароль"
-								class="popup-item__input">
+							<input autocomplete="off" required type="password" name="form-sign[password]" placeholder="Пароль"
+								autocomplete="new-password" class="popup-item__input">
 						</div>
 						<a href="" data-fls-popup-link="resetpswd" class="popup-item__pswd">Восстановить пароль</a>
 						<div class="popup-item__buttons">
@@ -47,11 +47,11 @@
 							<input required type="email" name="form-reg[email]" placeholder="Электронная почта"
 								class="popup-item__input">
 							<input data-fls-input-mask="+7 (999) 999-9999" required type="tel" name="form-reg[phone]"
-								placeholder="Телефон" class="popup-item__input">
+								autocomplete="off" placeholder="Телефон" class="popup-item__input">
 							<input required type="password" name="form-reg[password]" placeholder="Пароль"
-								class="popup-item__input">
+								autocomplete="new-password" class="popup-item__input">
 							<input required type="password" name="form-reg[password]" placeholder="Повторите пароль"
-								class="popup-item__input">
+								autocomplete="new-password" class="popup-item__input">
 						</div>
 						<div class="popup-item__buttons">
 							<a href="" data-fls-popup-link="confirmation"
@@ -154,10 +154,12 @@
 					method="POST">
 					<div class="popup-item__body">
 						<div class="popup-item__column popup-item__column--code">
+							<input type="text" name="form-newpswd[username]" placeholder="Email или логин"
+								class="popup-item__input" autocomplete="username">
 							<input required type="password" name="form-newpswd[password]" placeholder="Пароль"
-								class="popup-item__input">
+								autocomplete="new-password" class="popup-item__input">
 							<input required type="password" name="form-newpswd[password]" placeholder="Подтвердите пароль"
-								class="popup-item__input">
+								autocomplete="new-password" class="popup-item__input">
 						</div>
 						<div class="popup-item__buttons">
 							<a data-fls-popup-close href="" class="popup-item__button popup-item__button--orange">Восстановить

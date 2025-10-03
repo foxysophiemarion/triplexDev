@@ -37,7 +37,7 @@ export function navPanel() {
 		menu += `<style>
       #fls-dev-panel {
         position: fixed;
-        ${templateConfig.navpanel.position === 'left' ? 'left: 10px;' : 'right: 10px;'}
+        ${templateConfig.navpanel.position === 'left' ? 'left: 20px;' : 'right: 10px;'}
         ${templateConfig.navpanel.position === 'left' ? 'padding: 15px 25px 15px 15px;' : 'padding: 15px 15px 15px 25px;'}
         ${templateConfig.navpanel.position === 'left' ? 'border-radius: 0 10px 10px 0;' : 'border-radius: 10px 0 0 10px;'}
         top: 10%;

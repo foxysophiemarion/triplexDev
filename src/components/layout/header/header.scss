@@ -15,7 +15,7 @@
 	&__top {
 		position: relative;
 		color: $whiteColor;
-
+		padding: 16px 0;
 		background: var(--gradient-header);
 	}
 
@@ -146,7 +146,6 @@
 	}
 
 	&__profile {
-		padding: 16px 0;
 	}
 
 	&__cart {

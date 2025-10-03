@@ -12,12 +12,12 @@ export default {
 		filename: '_components.html',
 	},
 	git: {
-		repo: `https://github.com/foxysophiemarion/triplex.git`,
+		repo: ``,
 		branch: `main`,
 	},
 	navpanel: {
 		dev: true,
-		build: true,
+		build: false,
 		position: 'left',
 		color: '#ffffff',
 		background: 'rgba(51, 51, 51, 0.5)',
@@ -57,7 +57,7 @@ export default {
 			enable: true,
 			edithtml: true,
 			sizes: [600, 1200],
-			dpi: [1],
+			dpi: [],
 			attrignore: 'data-fls-image-ignore',
 			modernformat: {
 				enable: true,

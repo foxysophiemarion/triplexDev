@@ -1,7 +1,7 @@
 @font-face {
 font-family: "iconfont";
 font-display: swap;
-src: url("D://Front/2025/Projects/Triplex/src/assets/svgicons/preview/iconfont.woff2?9fe7315bac229dbeb0569e0193a758c1") format("woff2");
+src: url("D://Front/2025/Projects/TriplexDev/src/assets/svgicons/preview/iconfont.woff2?a3401fa5729d99f08a7738cf7ec2ee5d") format("woff2");
 }
 [class*="--icon-"]::before {
 font-family: iconfont;

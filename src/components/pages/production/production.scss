@@ -168,13 +168,15 @@
 }
 
 .form-step {
+	position: relative;
 	&__body {
 		display: flex;
 		color: $whiteColor;
 		min-height: 560px;
 		position: absolute;
+		z-index: 1;
 		top: 0;
-		left: 0;
+		left: -100%;
 		width: 100%;
 		opacity: 0;
 		transition: opacity 1s ease;
@@ -183,6 +185,7 @@
 			min-height: auto;
 		}
 		&.active {
+			left: 0;
 			position: relative;
 			opacity: 1;
 		}

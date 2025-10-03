@@ -9,9 +9,10 @@
 	}
 
 	&__row {
-		max-width: 400px;
-		display: flex;
 		gap: 12px;
+		&--auto {
+			max-width: max-content;
+		}
 	}
 
 	&__item {
@@ -25,6 +26,7 @@
 	}
 
 	&__cover {
+		aspect-ratio: 1 / 1;
 		border-radius: 8px;
 		overflow: hidden;
 		background-color: $productColor2;

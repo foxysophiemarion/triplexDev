@@ -296,13 +296,22 @@ body:has(.spollers__title--header.--spoller-active) main::before {
 	&:hover .product-card__cover {
 		background-color: $bgColor2;
 	}
+	&--auto {
+		.product-card__cover {
+			flex: 1 1 auto;
+			@media (max-width: toEm($tablet)) {
+				flex: none;
+			}
+		}
+	}
 
 	&__cover {
 		transition: background-color 0.3s;
 		border-radius: 12px;
+		overflow: hidden;
 		background-color: $productColor2;
 		position: relative;
-		flex: 1 1 auto;
+		aspect-ratio: 1;
 		@include adaptiveValue("margin-bottom", 12, 6);
 		img {
 			width: 100%;

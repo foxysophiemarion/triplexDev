@@ -89,6 +89,7 @@ function addToCart() {
 	}
 
 	document.addEventListener('click', (e) => {
+
 		const addBtn = e.target.closest('[data-fls-addtocart-button]');
 		if (!addBtn) return;
 

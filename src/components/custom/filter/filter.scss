@@ -64,10 +64,6 @@
 
 	&__text {
 		@include adaptiveValue("font-size", 16, 12);
-		&:after {
-			top: 9px;
-			left: 9px;
-		}
 	}
 }
 .search {
